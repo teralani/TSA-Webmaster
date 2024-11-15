@@ -1,0 +1,32 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15vh;
+    background-color: rgba(38, 51, 92, 0.84);
+    backdrop-filter:  blur(10);
+    -webkit-backdrop-filter: blur(10);
+    padding-inline: 5vw;
+    align-items: center;
+    position:sticky;
+    top: 8px;
+}
+
+#nav_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    /* border: 2px red solid; */
+    padding-inline: 5vw;
+    align-items: center;
+}
+#navbar #logo {
+    /* tbd */
+
+}
+
+#navbar .nav_items {
+    list-style: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-inline: 3vw;
+}
