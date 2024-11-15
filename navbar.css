@@ -1,27 +1,29 @@
 #navbar {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     height: 15vh;
-    background-color: rgba(38, 51, 92, 0.84);
-    backdrop-filter:  blur(10);
-    -webkit-backdrop-filter: blur(10);
+    background-color: rgba(43, 63, 121, 0.555);
+    backdrop-filter:  blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding-inline: 5vw;
     align-items: center;
     position:sticky;
-    top: 8px;
+    top: 0px;
 }
 
 #nav_buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: max-content;
     /* border: 2px red solid; */
     padding-inline: 5vw;
     align-items: center;
+    color:white
 }
 #navbar #logo {
     /* tbd */
+    font-size: 3em;
 
 }
 
@@ -29,4 +31,5 @@
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 3vw;
+    font-size: 1.8em;
 }
