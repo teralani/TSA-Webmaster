@@ -1,9 +1,9 @@
 #navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100vw;
     height: 15vh;
-    background-color: rgba(43, 63, 121, 0.555);
+    background-color: rgba(34, 49, 92, 0.804);
     backdrop-filter:  blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding-inline: 5vw;
@@ -16,7 +16,6 @@
     display: flex;
     justify-content: space-around;
     width: max-content;
-    /* border: 2px red solid; */
     padding-inline: 5vw;
     align-items: center;
     color:white
@@ -24,12 +23,75 @@
 #navbar #logo {
     /* tbd */
     font-size: 3em;
-
+    flex:5;
+    text-align: center;
 }
 
 #navbar .nav_items {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 3vw;
-    font-size: 1.8em;
+    font-size: clamp(0px, 1.8vw, 30px);
+    flex:1
+}
+#navbar .nav_items:hover {
+    /* text-shadow: white 0px 0px 20px; */
+    transform: translate3d(0px, -5px, 0px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.show_options {
+    position:absolute;
+    top: 15vh;
+    width:100vw !important;
+    height: 100vh;
+
+    visibility: visible !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20%;
+    padding-bottom: 40%;
+    background-color: rgba(40, 40, 40, 0.968);
+    backdrop-filter:blur(50px);
+    z-index: 999;
+    cursor:auto;
+}
+.show_options:hover {
+    cursor: pointer !important;
+}
+
+@media only screen and (max-width: 1100px){
+    .burger svg {
+        width: 6vh;
+        height: 6vh;
+        visibility: visible;
+        z-index: inherit;
+        display:inherit;
+        position: absolute;
+        right: 5vw;
+        top: 5vh;
+    }
+    #nav_buttons {
+        visibility: hidden;
+        display: none;
+    }
+    #navbar {
+        display:flex;
+        justify-content: center;
+    }
+    #logo {
+        flex: 5;
+    }
+    #navbar .nav_items {
+        font-size: clamp(0px, 3vh, 30px);
+        flex:1
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #navbar .burger {
+        display:none;
+        visibility: hidden;
+    }
 }

@@ -10,23 +10,61 @@
 </head>
 <style>
     *{box-sizing: border-box;}
-    body{background-color: rgb(61, 61, 61); margin:0px 0px}
+    body{background-color: rgb(61, 61, 61); margin: 0px; overflow-x: clip;}
+    a {text-decoration: none;}
+    a:visited {color:inherit}
 </style>
 <body>
     <!-- navbar div -->
     <div id="navbar">
-        <div id="logo">LOGO</div>
-        <div id="nav_buttons">
-            <li class="nav_items">Home</li>
-            <li class="nav_items">Menu</li>
-            <li class="nav_items">Ordering</li>
-            <li class="nav_items">About</li>
-            <li class="nav_items">Contact</li>
-            <li class="nav_items">Sources</li>
+        <div id="logo"><a href="/">LOGO</a></div>
+        <div class="" id="nav_buttons">
+            <li class="nav_items"><a>Home</a></li>
+            <li class="nav_items"><a>Menu</a></li>
+            <li class="nav_items"><a>Ordering</a></li>
+            <li class="nav_items"><a>About</a></li>
+            <li class="nav_items"><a>Contact</a></li>
+            <li class="nav_items"><a>Sources</a></li>
+        </div>
+        <div class="burger" onclick="showOptions()" style="width: min-content;">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 810 809.999993" preserveAspectRatio="xMidYMid meet" version="1.0">
+                <defs>
+                    <clipPath id="54a72f355c">
+                        <path d="M 16.105469 182.859375 L 793.921875 182.859375 L 793.921875 262.191406 L 16.105469 262.191406 Z M 16.105469 182.859375 " clip-rule="nonzero"/>
+                    </clipPath>
+                    <clipPath id="dca09a300b">
+                        <path d="M 54.355469 182.859375 L 755.644531 182.859375 C 765.789062 182.859375 775.519531 186.890625 782.691406 194.0625 C 789.863281 201.234375 793.894531 210.964844 793.894531 221.109375 L 793.894531 223.941406 C 793.894531 234.085938 789.863281 243.816406 782.691406 250.988281 C 775.519531 258.160156 765.789062 262.191406 755.644531 262.191406 L 54.355469 262.191406 C 44.210938 262.191406 34.480469 258.160156 27.308594 250.988281 C 20.136719 243.816406 16.105469 234.085938 16.105469 223.941406 L 16.105469 221.109375 C 16.105469 210.964844 20.136719 201.234375 27.308594 194.0625 C 34.480469 186.890625 44.210938 182.859375 54.355469 182.859375 Z M 54.355469 182.859375 " clip-rule="nonzero"/>
+                    </clipPath>
+                    <clipPath id="7d7d36e90c">
+                        <path d="M 16.105469 365.335938 L 793.921875 365.335938 L 793.921875 444.664062 L 16.105469 444.664062 Z M 16.105469 365.335938 " clip-rule="nonzero"/></clipPath>
+                    <clipPath id="cb4008d012">
+                            <path d="M 54.355469 365.335938 L 755.644531 365.335938 C 765.789062 365.335938 775.519531 369.363281 782.691406 376.539062 C 789.863281 383.710938 793.894531 393.441406 793.894531 403.585938 L 793.894531 406.414062 C 793.894531 416.558594 789.863281 426.289062 782.691406 433.460938 C 775.519531 440.636719 765.789062 444.664062 755.644531 444.664062 L 54.355469 444.664062 C 44.210938 444.664062 34.480469 440.636719 27.308594 433.460938 C 20.136719 426.289062 16.105469 416.558594 16.105469 406.414062 L 16.105469 403.585938 C 16.105469 393.441406 20.136719 383.710938 27.308594 376.539062 C 34.480469 369.363281 44.210938 365.335938 54.355469 365.335938 Z M 54.355469 365.335938 " clip-rule="nonzero"/>
+                    </clipPath>
+                    <clipPath id="272916e416">
+                        <path d="M 16.105469 547.808594 L 793.921875 547.808594 L 793.921875 627.140625 L 16.105469 627.140625 Z M 16.105469 547.808594 " clip-rule="nonzero"/>
+                    </clipPath>
+                    <clipPath id="0648b37e25">
+                        <path d="M 54.355469 547.808594 L 755.644531 547.808594 C 765.789062 547.808594 775.519531 551.839844 782.691406 559.011719 C 789.863281 566.183594 793.894531 575.914062 793.894531 586.058594 L 793.894531 588.890625 C 793.894531 599.035156 789.863281 608.765625 782.691406 615.9375 C 775.519531 623.109375 765.789062 627.140625 755.644531 627.140625 L 54.355469 627.140625 C 44.210938 627.140625 34.480469 623.109375 27.308594 615.9375 C 20.136719 608.765625 16.105469 599.035156 16.105469 588.890625 L 16.105469 586.058594 C 16.105469 575.914062 20.136719 566.183594 27.308594 559.011719 C 34.480469 551.839844 44.210938 547.808594 54.355469 547.808594 Z M 54.355469 547.808594 " clip-rule="nonzero"/>
+                    </clipPath>
+                    </defs>
+                <g clip-path="url(#54a72f355c)">
+                    <g clip-path="url(#dca09a300b)">
+                    <path fill="white" d="M 16.105469 182.859375 L 793.921875 182.859375 L 793.921875 262.191406 L 16.105469 262.191406 Z M 16.105469 182.859375 " fill-opacity="1" fill-rule="nonzero"/>
+                    </g>
+                    </g>
+                <g clip-path="url(#7d7d36e90c)">
+                    <g clip-path="url(#cb4008d012)"><path fill="white" d="M 16.105469 365.335938 L 793.921875 365.335938 L 793.921875 444.664062 L 16.105469 444.664062 Z M 16.105469 365.335938 " fill-opacity="1" fill-rule="nonzero"/>
+                    </g>
+                </g>
+                <g clip-path="url(#272916e416)">
+                    <g clip-path="url(#0648b37e25)"><path fill="white" d="M 16.105469 547.808594 L 793.921875 547.808594 L 793.921875 627.140625 L 16.105469 627.140625 Z M 16.105469 547.808594 " fill-opacity="1" fill-rule="nonzero"/>
+                    </g>
+                </g>
+            </svg>
         </div>
     </div>
     <div style="height:100vh; width:100vw; background-color: rgb(28, 28, 28); justify-content: center; display: grid">
-        <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1273516682.jpg?c=original" style="object-fit:cover;">
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1273516682.jpg?c=original" style="object-fit:scale-down;">
     </div>
 </body>
 </html>
