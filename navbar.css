@@ -3,7 +3,7 @@
     justify-content: space-evenly;
     width: 100vw;
     height: 15vh;
-    background-color: rgba(34, 49, 92, 0.804);
+    background-color: rgb(187,154,89);
     backdrop-filter:  blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding-inline: 5vw;
