@@ -5,8 +5,10 @@ body{
 background:rgb(255, 255, 255);
 margin:0;
 }
-
-#theGreenLine{
+#line{
+  height:auto;
+}
+#roadYellow{
 /* position:absolute; */
 top:50vh;
 overflow:visible;
@@ -17,5 +19,11 @@ stroke-dasharray: 1vh;
   /* position:absolute; */
   top:50vh;
   overflow:visible;
+  height: auto;
+}
+#car{
+  position: fixed;
+  transform-origin: 0, 0;
+  transform: rotate(0) translate(1, 1);
   
 }
