@@ -1,0 +1,21 @@
+
+
+body{
+
+background:rgb(255, 255, 255);
+margin:0;
+}
+
+#theGreenLine{
+/* position:absolute; */
+top:50vh;
+overflow:visible;
+stroke-dasharray: 1vh;
+
+}
+#roadBG{
+  /* position:absolute; */
+  top:50vh;
+  overflow:visible;
+  
+}

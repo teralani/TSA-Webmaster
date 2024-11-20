@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webmaster - Menu</title>
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="about.css" />
 </head>
 <style>
     * {
@@ -22,14 +23,15 @@
       color: inherit;
     }
   </style>
-<body>
+<body >
+    <!--navbar-->
     <div id="navbar">
         <div id="logo"><a href="/">LOGO</a></div>
         <div class="" id="nav_buttons">
           <li class="nav_items"><a>Home</a></li>
           <li class="nav_items"><a href="/menu.html">Menu</a></li>
-          <li class="nav_items"><a >Ordering</a></li>
-          <li class="nav_items"><a href="/about.html">About</a></li>
+          <li class="nav_items"><a>Ordering</a></li>
+          <li class="nav_items"><a>About</a></li>
           <li class="nav_items"><a>Contact</a></li>
           <li class="nav_items"><a>Sources</a></li>
         </div>
@@ -112,5 +114,32 @@
           </svg>
         </div>
       </div>
+
+
+      <!-- <div id="roadDiv" style="display: flex; gap: 10px;" > -->
+        <!-- <svg id="line" xmlns="http://www.w3.org/2000/svg" viewBox = "0 0 100 100" preserveAspectRatio="none"> -->
+            <!-- <path class="road"  -->
+            <!-- d="M 0 0 Q 0 240 150 240 Q 300 240 300 480 Q 300 720 150 720 Q 0 720 0 1200"
+            fill="none" stroke="#676767" stroke-width="1px" vectotEffect="non-scaling-stroke"/>
+        </svg>
+    </div> -->
+
+
+
+
+<svg class="line" viewBox="0 0 600 2800">
+  
+  
+  <path class="roadBG" 
+  d="M 0 0 Q 0 240 150 240 Q 300 240 300 480 Q 300 720 150 720 Q 0 720 0 1200"
+  fill="none" stroke="grey" stroke-width="2vh" />
+  <path class="theGreenLine" 
+        d="M 0 0 Q 0 240 150 240 Q 300 240 300 480 Q 300 720 150 720 Q 0 720 0 1200"
+        fill="none" stroke="yellow" style="stroke-dasharray: 1vh;"stroke-width="0.2vh" />
+  
+  
+</svg>
+
+
 </body>
 </html>
