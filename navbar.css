@@ -40,6 +40,10 @@
     transition: transform 0.3s ease-in-out;
 }
 
+#navbar .nav_items.selected {
+    color:rgb(69, 50, 12); font-size: clamp(0px, 2.5vw, 30px); text-decoration: underline; text-underline-offset: 0.9vh;
+}
+
 .show_options {
     position:absolute;
     top: 15vh;
