@@ -1,0 +1,6 @@
+.wrapper {
+    width: 100vw;
+    height: 150vh;
+    border: 2px red solid;
+    background-color: blue;
+}
