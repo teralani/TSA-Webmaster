@@ -1,6 +1,48 @@
 .wrapper {
     width: 100vw;
-    height: 120vh;
+    height: 150vh;
     border: 2px red solid;
     background-color: blue;
+}
+#appetizer {
+    background-image: linear-gradient(#000000d0 ,#0000008f), url("/resources/thai\ background.png");
+    background-size: 50vw;
+    background-position: center;
+    /* background-blend-mode: normal; */
+    background-attachment:fixed, fixed;
+    transform: translateZ(-100px);
+    overflow: clip;
+}
+
+.wrapper .container {
+    width: 100%;
+    height: 100%    ;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .container h1 {
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 5vw;
+    align-content: center;
+}
+.wrapper .container .img_wrapper {
+    height:120vh;
+    width:100%;
+    /* z-index: 10; */
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+}
+.wrapper .container img {
+    width: auto;
+    height: 150%;
+    position: relative;
+}
+
+#app{
+    top:0px;
 }
