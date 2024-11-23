@@ -12,15 +12,17 @@ const car = document.getElementById('car');
 const roadLength = road.getTotalLength();
 
 let currScroll = 0;
-let k = 115;
+const r= 3500
+let k = (-97.523*(window.innerHeight/window.innerWidth)) + 156;
+
 let maxScroll = k*(window.innerWidth/window.innerHeight);
 let progress = 0;
 function addScroll(){
-
+    console.log(k, -97.253*window.innerHeight/window.innerWidth , window.innerWidth, window.innerHeight)
     currScroll = ((window.scrollY/window.innerHeight)*100)-50;
 
     
-    progress = Math.pow(Math.max(currScroll, 0)/maxScroll, 0.85);
+    progress = Math.max(currScroll, 0)/maxScroll;
     
 
         
@@ -34,7 +36,9 @@ function addScroll(){
 }
 
 window.addEventListener("scroll", () => addScroll(),{ passive: true });
-window.addEventListener('resize', () => function(){
+window.onresize = function() {
+    console.log("trig");
     maxScroll = k*(window.innerWidth/window.innerHeight);
-});
+    k = (-97.523*(window.innerHeight/window.innerWidth)) + 156;
+}
 
