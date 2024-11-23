@@ -1,48 +1,42 @@
 .wrapper {
+    height: 120vh;
     width: 100vw;
-    height: 150vh;
-    border: 2px red solid;
-    background-color: blue;
+    padding-top: 0;
+    margin: 0 auto;
+    position: relative;
+    background-attachment:fixed, fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 #appetizer {
-    background-image: linear-gradient(#000000d0 ,#0000008f), url("/resources/thai\ background.png");
-    background-size: 50vw;
-    background-position: center;
-    /* background-blend-mode: normal; */
-    background-attachment:fixed, fixed;
-    transform: translateZ(-100px);
-    overflow: clip;
+    background-image: linear-gradient(#2c2921c2 ,#000000ea), url("https://img.freepik.com/free-vector/wat-benjamabhopit-silhouette-vector-design_53876-43760.jpg?t=st=1732387654~exp=1732391254~hmac=21b6984a750094b181263c7b846e23a009405c24757651cae777ec7238b4734d&w=2000");
+    background-size: cover;
+    background-position: 0 0, 0px 5vh;
+    
 }
 
-.wrapper .container {
-    width: 100%;
-    height: 100%    ;
-    display: flex;
-    flex-direction: column;
+.container{
+	margin: 0 auto;
+	min-width: 980px;
+	overflow: auto;
+	width: 980px;
 }
 
-.wrapper .container h1 {
-    color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    font-size: 5vw;
-    align-content: center;
-}
-.wrapper .container .img_wrapper {
-    height:120vh;
-    width:100%;
-    /* z-index: 10; */
-    display: grid;
-    align-content: center;
-    justify-content: center;
+.wrapper .img_wrapper {
+    height: 120%;
+    padding: 0;
     position: absolute;
-}
-.wrapper .container img {
-    width: auto;
-    height: 150%;
-    position: relative;
+    width: inherit;
+    z-index: 10;
 }
 
-#app{
-    top:0px;
+#appetizer .img_wrapper {
+    background: url(/resources/spring\ rolls.png) 50% 85% no-repeat fixed;
+    background-size: 50vh;
+}
+
+#entrees {
+    background-image: linear-gradient(#00000085 ,#000000ab), url("https://img.freepik.com/free-vector/angkor-wat-temple-silhouette-vector-design_53876-66611.jpg?t=st=1732388449~exp=1732392049~hmac=4ad9b43633a85e4c5862b830afb5ddf6e5789165d4904d9e4201d84fe5b76eae&w=1800");
+    background-size: cover;
+    background-position: 0 0, 0px 10vh;
 }

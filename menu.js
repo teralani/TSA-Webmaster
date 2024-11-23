@@ -1,12 +1,22 @@
-const app = document.getElementById('app');
-const offset = 0 - document.body.getBoundingClientRect().top + app.getBoundingClientRect().top
+const wrapper = document.body.querySelectorAll(".wrapper");
 
-function onScroll(){
-    console.log(offset + " " + window.scrollY);
-    console.log(window.scrollY - offset);
-    if (window.scrollY - offset > 0) {
-        app.style.top = window.scrollY - offset + "px";
-    }
-}
+function parallax() {
+   let offset = window.scrollY;
+   wrapper.forEach((el) => {
+        switch(el){
+            case wrapper[0]:
+                c = 0; break;
+            case wrapper[0]:
+                c = 2000; break;
+            case wrapper[0]:
+                c = 0; break;   
+        }
+        let o = window.scrollY - el.getBoundingClientRect().top - visualViewport.offsetTop;
+        if(o >= 0) {
+            console.log(el.id + ": " + o);
+            el.style.backgroundPositionY = "0, " + (o * 0.05 - c) + "px"
+        }
+    });
+};
 
-window.addEventListener("scroll", () => onScroll(), {passive: false});
+window.addEventListener("scroll", () => parallax(), {passive: true});
