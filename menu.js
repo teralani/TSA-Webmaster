@@ -1,12 +1,16 @@
-const app = document.getElementById('app');
-const offset = 0 - document.body.getBoundingClientRect().top + app.getBoundingClientRect().top
+const wrapper = document.body.querySelectorAll(".wrapper");
 
-function onScroll(){
-    console.log(offset + " " + window.scrollY);
-    console.log(window.scrollY - offset);
-    if (window.scrollY - offset > 0) {
-        app.style.top = window.scrollY - offset + "px";
-    }
-}
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            if(window.scrollY - entry.target.getBoundingClientRect().top <= 0) {
+                console.log(((window.scrollY - entry.target.getBoundingClientRect().top)/2));
+                entry.target.style.backgroundPosition = "center " + ((window.scrollY - entry.target.getBoundingClientRect().top)/2);
+            }
+        }
+    });
+});
 
-window.addEventListener("scroll", () => onScroll(), {passive: false});
+wrapper.forEach((el) => {
+    observer.observe(el);
+})
