@@ -1,16 +1,22 @@
 const wrapper = document.body.querySelectorAll(".wrapper");
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-            if(window.scrollY - entry.target.getBoundingClientRect().top <= 0) {
-                console.log(((window.scrollY - entry.target.getBoundingClientRect().top)/2));
-                entry.target.style.backgroundPosition = "center " + ((window.scrollY - entry.target.getBoundingClientRect().top)/2);
-            }
+function parallax() {
+   let offset = window.scrollY;
+   wrapper.forEach((el) => {
+        switch(el){
+            case wrapper[0]:
+                c = 0; break;
+            case wrapper[0]:
+                c = 2000; break;
+            case wrapper[0]:
+                c = 0; break;   
+        }
+        let o = window.scrollY - el.getBoundingClientRect().top - visualViewport.offsetTop;
+        if(o >= 0) {
+            console.log(el.id + ": " + o);
+            el.style.backgroundPositionY = "0, " + (o * 0.05 - c) + "px"
         }
     });
-});
+};
 
-wrapper.forEach((el) => {
-    observer.observe(el);
-})
+window.addEventListener("scroll", () => parallax(), {passive: true});

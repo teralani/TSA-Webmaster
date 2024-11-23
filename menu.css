@@ -4,15 +4,15 @@
     padding-top: 0;
     margin: 0 auto;
     position: relative;
-    border: 1px red solid;
-    background-color: blue;
+    background-attachment:fixed, fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 #appetizer {
-    background-image: linear-gradient(#000000e7 ,#0000008f), url("/resources/thai\ background.png");
-    background-size: 50vw;
-    background-position: center;
-    background-attachment:fixed, fixed;
-    overflow: hidden;
+    background-image: linear-gradient(#2c2921c2 ,#000000ea), url("https://img.freepik.com/free-vector/wat-benjamabhopit-silhouette-vector-design_53876-43760.jpg?t=st=1732387654~exp=1732391254~hmac=21b6984a750094b181263c7b846e23a009405c24757651cae777ec7238b4734d&w=2000");
+    background-size: cover;
+    background-position: 0 0, 0px 5vh;
+    
 }
 
 .container{
@@ -22,9 +22,7 @@
 	width: 980px;
 }
 
-#appetizer .img_wrapper {
-    background: url(/resources/spring\ rolls.png) 50% 85% no-repeat fixed;
-    background-size: 50vh;
+.wrapper .img_wrapper {
     height: 120%;
     padding: 0;
     position: absolute;
@@ -32,3 +30,13 @@
     z-index: 10;
 }
 
+#appetizer .img_wrapper {
+    background: url(/resources/spring\ rolls.png) 50% 85% no-repeat fixed;
+    background-size: 50vh;
+}
+
+#entrees {
+    background-image: linear-gradient(#00000085 ,#000000ab), url("https://img.freepik.com/free-vector/angkor-wat-temple-silhouette-vector-design_53876-66611.jpg?t=st=1732388449~exp=1732392049~hmac=4ad9b43633a85e4c5862b830afb5ddf6e5789165d4904d9e4201d84fe5b76eae&w=1800");
+    background-size: cover;
+    background-position: 0 0, 0px 10vh;
+}
