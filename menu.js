@@ -6,10 +6,10 @@ function parallax() {
         switch(el){
             case wrapper[0]:
                 c = 0; break;
-            case wrapper[0]:
-                c = 2000; break;
-            case wrapper[0]:
-                c = 0; break;   
+            case wrapper[1]:
+                c = 300; break;
+            case wrapper[2]:
+                c = 100 ; break;   
         }
         let o = window.scrollY - el.getBoundingClientRect().top - visualViewport.offsetTop;
         if(o >= 0) {
