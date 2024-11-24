@@ -1,3 +1,4 @@
+
 #navbar {
     display: flex;
     justify-content: space-evenly;
@@ -45,14 +46,14 @@
     color:rgb(69, 50, 12); font-size: clamp(0px, 2.5vw, 30px); text-decoration: underline; text-underline-offset: 0.9vh;
 }
 
-.show_options {
+#nav_buttons.show_options {
     position:absolute;
     top: 15vh;
-    width:100vw !important;
+    width: 100vw;
     height: 100vh;
 
-    visibility: visible !important;
-    display: flex !important;
+    visibility: visible;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 20%;
@@ -60,13 +61,18 @@
     background-color: rgba(40, 40, 40, 0.968);
     backdrop-filter:blur(50px);
     z-index: 999;
-    cursor:auto;
+    cursor:default;
+
+    transition: all 1s;
 }
 .show_options:hover {
     cursor: pointer !important;
 }
 
+
+
 @media only screen and (max-width: 1100px){
+
     .burger svg {
         width: 6vh;
         height: 6vh;
@@ -80,6 +86,7 @@
     #nav_buttons {
         visibility: hidden;
         display: none;
+        height: 0px;
     }
     #navbar {
         display:flex;
