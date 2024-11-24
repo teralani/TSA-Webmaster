@@ -4,10 +4,12 @@
     width:min-content;
     justify-self: center;
 }
-
+.special pre{
+    font-size: 1vw;
+}
 .typewriter p{
     font-family:'Courier New', Courier, monospace;
-    font-size: 6vw;
+    font-size: 5.5vw;
     margin: 0 auto;
     overflow: hidden;
     white-space: nowrap;
