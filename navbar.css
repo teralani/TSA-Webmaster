@@ -92,14 +92,17 @@
         font-size: clamp(0px, 3vh, 30px);
         flex:1
     }
+    #navbar .nav_items.selected {
+        color:rgb(69, 50, 12); font-size: clamp(0px, 4vw, 30px); text-decoration: underline; text-underline-offset: 0.9vh;
+    }
+    .burger:hover {
+        cursor: pointer;
+    }
 }
 
 @media only screen and (min-width: 1100px) {
     #navbar .burger {
         display:none;
         visibility: hidden;
-    }
-    .burger:hover {
-        cursor: pointer;
     }
 }
