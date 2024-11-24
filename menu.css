@@ -44,6 +44,10 @@
     background: url(/resources/noodles.png) 49.5% 98% no-repeat fixed;
     background-size: 59vh;
 }
+#dessert .img_wrapper {
+    background: url(/resources/black-sticky-rice-with-caramalised-coconut-and-mango.png) 49.5% 81.5% no-repeat fixed;
+    background-size: 45vh;
+}
 
 
 #entrees {

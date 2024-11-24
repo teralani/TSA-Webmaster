@@ -24,8 +24,8 @@ stroke-dasharray: 1vh;
 #car{
   position: fixed;
   transform-origin: 0, 0;
-  transform: rotate(90) translate(1, 1);
-  
+  transform: rotate(30) translate(1, 1);
+  /* scale:0.5; */
 }
 html {
   scroll-behavior: smooth;
