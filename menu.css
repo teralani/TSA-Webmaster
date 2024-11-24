@@ -34,9 +34,29 @@
     background: url(/resources/spring\ rolls.png) 50% 85% no-repeat fixed;
     background-size: 50vh;
 }
+#entrees .img_wrapper {
+    background: url(/resources/vegan-massaman-curry-fb.png) 49.5% 87% no-repeat fixed;
+    background-size: 49vh;
+}
+
+#noodles .img_wrapper {
+    background: url(/resources/noodles.png) 49.5% 98% no-repeat fixed;
+    background-size: 59vh;
+}
+
 
 #entrees {
     background-image: linear-gradient(#00000085 ,#000000ab), url("https://img.freepik.com/free-vector/angkor-wat-temple-silhouette-vector-design_53876-66611.jpg?t=st=1732388449~exp=1732392049~hmac=4ad9b43633a85e4c5862b830afb5ddf6e5789165d4904d9e4201d84fe5b76eae&w=1800");
+    background-size: cover;
+    background-position: 0 0, 0px 10vh;
+}
+#noodles {
+    background-image: linear-gradient(#00000085 ,#000000ab), url("resources/GST\ CAM\ 952-02\ [Converted].jpg");
+    background-size: cover;
+    background-position: 0 0, 0px 10vh;
+}
+#dessert {
+    background-image: linear-gradient(#00000085 ,#000000ab), url("resources/64786-OB2VD5-227-02.jpg");
     background-size: cover;
     background-position: 0 0, 0px 10vh;
 }
