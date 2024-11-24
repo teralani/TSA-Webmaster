@@ -99,4 +99,7 @@
         display:none;
         visibility: hidden;
     }
+    .burger:hover {
+        cursor: pointer;
+    }
 }
