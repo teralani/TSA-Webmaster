@@ -39,10 +39,20 @@ window.onresize = function() {
 }
 
 function imageTrigger(progress){
+    console.log(progress);
     if(progress >= 0.06){
         document.getElementById("farm_img").classList.add("in-view")
+        document.getElementById("farm_text").classList.add("in-view")
     }else{
         document.getElementById("farm_img").classList.remove("in-view")
+        document.getElementById("farm_text").classList.remove("in-view")
+    }
+    if(progress >= 0.26){
+        document.getElementById("second_img").classList.add("in-view")
+        document.getElementById("second_text").classList.add("in-view")
+    }else{
+        document.getElementById("second_img").classList.remove("in-view")
+        document.getElementById("second_text").classList.remove("in-view")
     }
 }
 
