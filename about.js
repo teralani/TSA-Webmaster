@@ -12,6 +12,7 @@ let k = (-97.523*(window.innerHeight/window.innerWidth)) + 156;
 
 let maxScroll = k*(window.innerWidth/window.innerHeight);
 let progress = 0;
+
 function addScroll(){
 
     currScroll = ((window.scrollY/window.innerHeight)*100)-50;
@@ -27,12 +28,21 @@ function addScroll(){
     let angle = 90+Math.atan2((Dirpoint.y-point.y),(Dirpoint.x-point.x))*(180/Math.PI);
     car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+angle+') ');
     prevangle = angle
+    imageTrigger(progress);
 }
 
 window.addEventListener("scroll", () => addScroll(),{ passive: true });
 window.onresize = function() {
-    console.log("trig");
     maxScroll = k*(window.innerWidth/window.innerHeight);
     k = (-97.523*(window.innerHeight/window.innerWidth)) + 156;
+    addScroll()
+}
+
+function imageTrigger(progress){
+    if(progress >= 0.06){
+        document.getElementById("farm_img").classList.add("in-view")
+    }else{
+        document.getElementById("farm_img").classList.remove("in-view")
+    }
 }
 

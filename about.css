@@ -1,10 +1,19 @@
 
-
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
 body{
-
 background:rgb(255, 255, 255);
 margin:0;
 }
+
+
+/* road stuff */
 #line{
   height:auto;
 }
@@ -21,12 +30,34 @@ stroke-dasharray: 1vh;
   overflow:visible;
   height: auto;
 }
+
+/* car */
 #car{
   position: fixed;
   transform-origin: 0, 0;
   transform: rotate(30) translate(1, 1);
   /* scale:0.5; */
 }
-html {
-  scroll-behavior: smooth;
+
+
+/* pictures */
+.in-view{
+  transition:right 0.5s ease-in-out, width 0.5s ease-in-out, top 0.5s ease-in-out;
+}
+#farm_img{
+  transform-origin: center center;
+  position: absolute;
+  top: 110vh; 
+  width: 10vw;
+  height: auto;
+  right: -10vw;
+  border-radius: 30px;
+
+  transition:right 0.5s ease-in-out, width 0.5s ease-in-out, top 0.5s ease-in-out;
+}
+#farm_img.in-view{
+  width: 30vw !important;
+  right:5vw !important;
+  top: 100vh !important;
+  
 }
