@@ -1,23 +1,38 @@
 const wrapper = document.body.querySelectorAll(".wrapper");
 
 function parallax() {
+    if (scrollY >= visualViewport.height * 0.15){
+        document.body.querySelector(".fancy").classList.add("seen");
+        document.body.querySelector("#scroll-up").style.display = "inherit";
+    } else {
+        document.body.querySelector(".fancy").classList.remove("seen");
+        document.body.querySelector("#scroll-up").style.display = "none"
+    }
    wrapper.forEach((el) => {
         switch(el){
             case wrapper[0]:
-                c = 150; break;
+                c = 150; a = 0; break;
             case wrapper[1]:
-                c = 400; break;
+                c = 400; a = -150; break;
             case wrapper[2]:
-                c = 200 ; break;
+                c = 400; a = -300; break;
             case wrapper[3]:
-                c = 200 ; break;  
+                c = 500; a = -400; break;  
         }
         let o = window.scrollY - el.getBoundingClientRect().top - visualViewport.offsetTop;
         if(o >= 0) {
-            console.log(el.id + ": " + o);
-            el.style.backgroundPositionY = "0, " + (o * 0.05 - c) + "px"
+            el.style.backgroundPositionY = (o*0.09 + 250 + a) + "px, 0, " + (o * 0.05 - c) + "px"
         }
     });
 };
 
 window.addEventListener("scroll", () => parallax(), {passive: true});
+
+function sl(el) {
+    console.log(document.querySelector("#"+el).getBoundingClientRect().top);
+    window.scrollBy({top: document.querySelector("#"+el).getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
+}
+
+function scrollUp() {
+    window.scroll({top: 0, left: 0, behavior: "smooth"})
+}

@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     width: 100vw;
     height: 15vh;
-    background-color: rgb(187,154,89);
+    background-color: rgba(33,59,48,255);
     backdrop-filter:  blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding-inline: 5vw;
@@ -20,13 +20,16 @@
     width: max-content;
     padding-inline: 5vw;
     align-items: center;
-    color:white
+    color:
+    rgb(224,188,164)
 }
 #navbar #logo {
     /* tbd */
     font-size: 3em;
     flex:5;
     text-align: center;
+    color: 
+    rgb(224,188,164);
 }
 
 #navbar .nav_items {
@@ -43,7 +46,8 @@
 }
 
 #navbar .nav_items.selected {
-    color:rgb(69, 50, 12); font-size: clamp(0px, 2.5vw, 30px); text-decoration: underline; text-underline-offset: 0.9vh;
+    color:
+    rgb(243, 160, 105); font-size: clamp(0px, 2.5vw, 30px); text-decoration: underline; text-underline-offset: 0.9vh;
 }
 
 #nav_buttons.show_options {
