@@ -10,11 +10,20 @@
     height: min-content;
     justify-self: center;
 }
+
 .special{
+    animation-delay: 3s;
+    animation: fadeIn 3s;
+    animation-fill-mode: forwards;
     position: relative;
     font-family: 'Courier New', Courier, monospace;
     justify-self: center;
-    bottom: 5dvh;
+    bottom: 20dvh;
+    left: -22dvw;
+}
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
 }
 .typewriter p{
     position: relative;
@@ -29,9 +38,27 @@
     blink 1s step-end infinite;
     
 }
-
+.button:hover{
+	box-shadow:0 0 0 0 white;
+}
 .button {
-    background-color: lightblue;
+    animation-delay: 3s;
+    animation: fadeIn 3s;
+    border:1px solid #105f35;
+	color:#105f35;
+	box-shadow:4px 4px 0px 0px #105f35;
+    position:relative;
+	margin-top:10%;
+	background:#F3F2ED;
+	padding:20px;
+	letter-spacing:5px;
+	text-transform:uppercase;
+	transition: all 300ms ease-in-out;
+	left: 9dvw;
+    bottom: 4dvh;
+	width: 180px;
+    cursor: pointer;
+    /* background-color: rgb(0, 185, 123);
     width: 9dvw;
     transform-origin: center;
     height: 6dvh;
@@ -46,7 +73,8 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.4dvw;
     margin: 4px 2px;
-    cursor: pointer;
+    cursor: pointer; */
+    
     border-radius: 4dvh;
   }
 
