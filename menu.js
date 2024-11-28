@@ -13,11 +13,11 @@ function parallax() {
             case wrapper[0]:
                 c = 0; a = 0; break;
             case wrapper[1]:
-                c = 100; a = -150; break;
+                c = 100; a = -100; break;
             case wrapper[2]:
-                c = 0; a = -300; break;
+                c = 0; a = -200; break;
             case wrapper[3]:
-                c = 0; a = -400; break;  
+                c = 0; a = -300; break;  
         }
         let o = window.scrollY - el.getBoundingClientRect().top - visualViewport.offsetTop;
         if(el.id == "entrees") {
