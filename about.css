@@ -39,76 +39,80 @@ stroke-dasharray: 1vh;
   /* scale:0.5; */
 }
 
-
+#parent{
+  position:absolute;
+  top:50vh;
+  width:100%;
+}
+.about-stuff{
+  position:relative;
+}
 /* pictures */
-.in-view{
-  transition:right 0.5s ease-in-out, width 0.5s ease-in-out, top 0.5s ease-in-out, opacity 0.5s ease-in-out;;
+/* .in-view{
+  transition:left 0.5s ease-in-out, width 0.5s ease-in-out, opacity 0.5s cubic-bezier(1,-0.04,1,.54);
+} */
+
+#farm{
+  left:100vw;
+  width: min-content;
+  margin-top:40vh;
+  margin-bottom: max(70vh, 45vw);
 }
-#farm_img{
+#farm .img{
+  left: 0vw;
+}
+#farm .img.in-view{
+  width:25vw !important;
+  left: -30vw !important;
+}
+#farm .text{
+  left: 0vw;
+  width:30vw;
+}
+#farm .text.in-view{
+  left: -60vw !important;
+}
+
+#organic{
+  left:100vw;
+  width: min-content;
+}
+#organic .img{
+  left: 0vw;
+}
+#organic .img.in-view{
+  width:25vw !important;
+  left: -30vw !important;
+}
+#organic .text{
+  left: 0vw;
+  width: 25vw;
+  margin-top: 20vw;
+}
+#organic .text.in-view{
+  left: -30vw !important;
+}
+.img{
   transform-origin: center center;
   position: absolute;
-  top: 110vh; 
   width: 10vw;
   height: auto;
-  right: -10vw;
   border-radius: 30px;
 
-  transition:right 0.5s ease-in-out, width 0.5s ease-in-out, top 0.5s ease-in-out;
+  transition:left 0.5s ease-in-out, width 0.5s ease-in-out;
 }
-#farm_img.in-view{
-  width: 30vw !important;
-  right:5vw !important;
-  top: 100vh !important;
-}
-#farm_text{
+.text{
   transform-origin: center center;
   position: absolute;
-  top: 100vh; 
-  width: 10vw;
   height: auto;
-  right: 35vw;
   border-radius: 30px;
   font-family:'Courier New', Courier, monospace;
   font-size: 1.2vw;
   opacity: 0%;
-  transition:width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  
+  transition:left 0.5s ease-in-out, opacity 0.5s cubic-bezier(0,0.75,0,0.75);
 }
-#farm_text.in-view{
-  width: 24vw !important;
+.text.in-view{
   opacity: 100% !important;
-}
-
-/* second stuff */
-#second_img{
-  transform-origin: center center;
-  position: absolute;
-  top: 140vh; 
-  width: 10vw;
-  height: auto;
-  right: -10vw;
-  border-radius: 30px;
-
-  transition:right 0.5s ease-in-out, width 0.5s ease-in-out, top 0.5s ease-in-out;
-}
-#second_img.in-view{
-  width: 25vw !important;
-  right:5vw !important;
-  top: 130vh !important;
-}
-#second_text{
-  transform-origin: center center;
-  position: absolute;
-  top: 155vh; 
-  width: 10vw;
-  height: auto;
-  right: 5vw;
-  border-radius: 30px;
-  font-family:'Courier New', Courier, monospace;
-  font-size: 1.2vw;
-  opacity: 0%;
-  transition:width 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-#second_text.in-view{
-  width: 24vw !important;
-  opacity: 100% !important;
+  transition:left 0.5s ease-in-out, opacity 0.5s cubic-bezier(0.75,0,0.75,0);
 }
