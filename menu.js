@@ -11,17 +11,17 @@ function parallax() {
    wrapper.forEach((el) => {
         switch(el){
             case wrapper[0]:
-                c = 150; a = 0; break;
+                c = 0; a = 0; break;
             case wrapper[1]:
-                c = 400; a = -150; break;
+                c = 100; a = -150; break;
             case wrapper[2]:
-                c = 400; a = -300; break;
+                c = 0; a = -300; break;
             case wrapper[3]:
-                c = 500; a = -400; break;  
+                c = 0; a = -400; break;  
         }
         let o = window.scrollY - el.getBoundingClientRect().top - visualViewport.offsetTop;
         if(o >= 0) {
-            el.style.backgroundPositionY = (o*0.09 + 250 + a) + "px, 0, " + (o * 0.05 - c) + "px"
+            el.style.backgroundPositionY = (o*0.09 + 250 + a) + "px, 0, " + (o * -0.055 - c) + "px"
         }
     });
 };

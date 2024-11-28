@@ -47,7 +47,7 @@
 
 #navbar .nav_items.selected {
     color:
-    rgb(243, 160, 105); font-size: clamp(0px, 2.5vw, 30px); text-decoration: underline; text-underline-offset: 0.9vh;
+    rgb(243, 160, 105); font-size: clamp(0px, 2.5vw, 35px); text-decoration: underline; text-underline-offset: 0.9vh;
 }
 
 #nav_buttons.show_options {
@@ -104,7 +104,7 @@
         flex:1
     }
     #navbar .nav_items.selected {
-        color:rgb(207, 182, 134); font-size: clamp(0px, 4vw, 30px); text-decoration: underline; text-underline-offset: 0.9vh;
+        color:rgb(243, 160, 105); font-size: clamp(0px, 6vw, 50px); text-decoration: underline; text-underline-offset: 0.9vh;
     }
     .burger:hover {
         cursor: pointer;
