@@ -1,13 +1,14 @@
 
 #navbar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100vw;
     height: 15vh;
     background-color: rgba(33,59,48,255);
     backdrop-filter:  blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding-inline: 5vw;
+    padding-right: 3vw;
+    padding-left: 8vw;
     align-items: center;
     position:sticky;
     top: 0px;
@@ -26,7 +27,6 @@
 #navbar #logo {
     /* tbd */
     font-size: 3em;
-    flex:5;
     text-align: center;
     color: 
     rgb(224,188,164);
@@ -35,7 +35,7 @@
 #navbar .nav_items {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    padding-inline: 3vw;
+    padding-inline: 1vw;
     font-size: clamp(0px, 1.8vw, 30px);
     flex:1
 }
@@ -98,6 +98,7 @@
     }
     #logo {
         flex: 5;
+
     }
     #navbar .nav_items {
         font-size: clamp(0px, 3vh, 30px);
