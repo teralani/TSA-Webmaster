@@ -20,7 +20,11 @@ function parallax() {
                 c = 0; a = -400; break;  
         }
         let o = window.scrollY - el.getBoundingClientRect().top - visualViewport.offsetTop;
-        if(o >= 0) {
+        if(el.id == "entrees") {
+            console.log("vh: "+ (window.scrollY + visualViewport.height))
+            console.log("o: "+o)
+        }
+        if(o > 0 && (window.scrollY + visualViewport.height) > o) {
             el.style.backgroundPositionY = (o*0.09 + 250 + a) + "px, 0, " + (o * -0.055 - c) + "px"
         }
     });
