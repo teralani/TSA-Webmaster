@@ -2,13 +2,15 @@
 
     height: min-content;
     padding-bottom: 3vh;
+    padding-left: 10vw;
 }
 .typewriter{
+    position: relative;
     display: flex;
     justify-content: center;
     width:min-content;
     height: min-content;
-    justify-self: center;
+
 }
 
 .special{
@@ -17,9 +19,7 @@
     animation-fill-mode: forwards;
     position: relative;
     font-family: 'Courier New', Courier, monospace;
-    justify-self: center;
-    bottom: 20dvh;
-    left: -22dvw;
+    /* justify-self: center; */
 }
 @keyframes fadeIn {
     from { opacity: 0;}
@@ -27,7 +27,6 @@
 }
 .typewriter p{
     position: relative;
-    bottom: -4dvh;
     font-family:'Courier New', Courier, monospace;
     font-size: 5.5vw;
     margin: 0 auto;
@@ -48,14 +47,11 @@
 	color:#105f35;
 	box-shadow:4px 4px 0px 0px #105f35;
     position:relative;
-	margin-top:10%;
 	background:#F3F2ED;
 	padding:20px;
 	letter-spacing:5px;
 	text-transform:uppercase;
 	transition: all 300ms ease-in-out;
-	left: 9dvw;
-    bottom: 4dvh;
 	width: 180px;
     cursor: pointer;
     /* background-color: rgb(0, 185, 123);
