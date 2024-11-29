@@ -16,19 +16,21 @@ margin:0;
 /* road stuff */
 #line{
   height:auto;
+  position: absolute;
 }
 #roadYellow{
 /* position:absolute; */
 top:50vh;
 overflow:visible;
 stroke-dasharray: 1vh;
-
+position: absolute;
 }
 #roadBG{
   /* position:absolute; */
   top:50vh;
   overflow:visible;
   height: auto;
+  position: absolute;
 }
 
 /* car */
@@ -56,7 +58,7 @@ stroke-dasharray: 1vh;
   left:100vw;
   width: min-content;
   margin-top:40vh;
-  margin-bottom: max(70vh, 45vw);
+  /* margin-bottom: max(60vh, 50vw); */
 }
 #farm .img{
   left: 0vw;
@@ -68,17 +70,21 @@ stroke-dasharray: 1vh;
 #farm .text{
   left: 0vw;
   width:30vw;
+  top: -10vw;
 }
 #farm .text.in-view{
+  
   left: -60vw !important;
 }
 
 #organic{
   left:100vw;
   width: min-content;
+  margin-bottom: 30vh;  
 }
 #organic .img{
   left: 0vw;
+  top: -10vw;
 }
 #organic .img.in-view{
   width:25vw !important;
@@ -87,14 +93,61 @@ stroke-dasharray: 1vh;
 #organic .text{
   left: 0vw;
   width: 25vw;
-  margin-top: 20vw;
+  top: -10vw;
+  /* margin-top: max(20vw, 22vh); */
 }
 #organic .text.in-view{
   left: -30vw !important;
 }
+
+#fresh{
+  top: -5vh;
+  left:100vw;
+  width: min-content;
+}
+#fresh .img{
+  left: 0vw;
+  top:-20vh;
+}
+#fresh .img.in-view{
+  width:25vw !important;
+  left: -50vw !important;
+}
+#fresh .text{
+  left: 0vw;
+  width:30vw;
+  top:-25vw;
+}
+#fresh .text.in-view{
+  left: -80vw !important;
+}
+
+#emissions{
+  left:100vw;
+  width: min-content;
+  top:-15vw;
+}
+#emissions .img{
+  left: 0vw;
+  top: -5vw;
+}
+#emissions .img.in-view{
+  width:25vw !important;
+  left: -50vw !important;
+}
+#emissions .text{
+  left: 0vw;
+  width:25vw;
+  top:-20vw;
+}
+#emissions .text.in-view{
+  left: -24vw !important;
+}
+
+
 .img{
   transform-origin: center center;
-  position: absolute;
+  position: relative;
   width: 10vw;
   height: auto;
   border-radius: 30px;
@@ -103,11 +156,11 @@ stroke-dasharray: 1vh;
 }
 .text{
   transform-origin: center center;
-  position: absolute;
+  position: relative;
   height: auto;
   border-radius: 30px;
   font-family:'Courier New', Courier, monospace;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   opacity: 0%;
   
   transition:left 0.5s ease-in-out, opacity 0.5s cubic-bezier(0,0.75,0,0.75);
@@ -115,4 +168,27 @@ stroke-dasharray: 1vh;
 .text.in-view{
   opacity: 100% !important;
   transition:left 0.5s ease-in-out, opacity 0.5s cubic-bezier(0.75,0,0.75,0);
+}
+
+@media only screen and (max-width: 1520px) {
+  #fresh{
+    top: -0vh;
+  }
+  #emissions{
+    top:-25vh;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  #fresh{
+    top: -19vh;
+  }
+  #fresh .text{
+    top: -35vh;
+  }
+  #emissions{
+    top:-42vh;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+
 }
