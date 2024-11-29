@@ -136,3 +136,15 @@ a {
     text-shadow: 0 2px 20px white;
     translate: 0 0.35vh;
   }
+
+
+  .map {
+    position: fixed;
+    z-index: 999;
+    width: 24vw;
+    height: 24vw;
+    border-radius: 24vw;
+    background-color: white;
+    top: 45vh;
+    left: 37vw;
+  }
