@@ -141,10 +141,11 @@ a {
   .map {
     position: fixed;
     z-index: 999;
-    width: 24vw;
-    height: 24vw;
-    border-radius: 24vw;
+    width: 600px;
+    height: 600px;
+    border-radius: 600px;
     background-color: white;
     top: 45vh;
     left: 37vw;
+    cursor: pointer;
   }

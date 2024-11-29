@@ -1,6 +1,7 @@
 const wrapper = document.body.querySelectorAll(".wrapper");
 
 let section = 1;
+const offsets = [visualViewport.height * 1.2, visualViewport.height *0.5 / visualViewport.height / 1.2]
 
 function parallax() {
     if (scrollY >= visualViewport.height * 0.15){
@@ -10,21 +11,20 @@ function parallax() {
         document.body.querySelector(".fancy").classList.remove("seen");
         document.body.querySelector("#scroll-up").style.display = "none"
     }
+
+    // section = ((window.scrollY + visualViewport.height *0.4) / visualViewport.height / 1.2) | 0;
+
    wrapper.forEach((el) => {
         let o = window.scrollY - el.getBoundingClientRect().top - visualViewport.offsetTop;
         if(o > 0 && (window.scrollY + visualViewport.height) > o) {
             switch(el){
                 case wrapper[0]:
-                    section = 1;
                     c = 0; a = 0; break;
                 case wrapper[1]:
-                    section = 2;
                     c = 100; a = -100; break;
                 case wrapper[2]:
-                    section = 3000;
                     c = 0; a = -200; break;
                 case wrapper[3]:
-                    section = 4;
                     c = 0; a = -300; break;  
             }
             el.style.backgroundPositionY = (o*0.09 + 250 + a) + "px, 0, " + (o * -0.055 - c) + "px"
@@ -44,7 +44,10 @@ function scrollUp() {
 }
 
 function show() {
-    console.log(section);
+    section = (window.scrollY/offsets[0] + offsets[1]) | 0;
+    window.scrollBy({top: wrapper[section].getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
+
+    
 }
 
-document.querySelector(".map").addEventListener("mouseover", () => show())
+document.querySelector(".map").addEventListener("mousedown", () => show())
