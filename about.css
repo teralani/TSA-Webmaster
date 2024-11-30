@@ -101,7 +101,7 @@ position: absolute;
 }
 
 #fresh{
-  top: -5vh;
+  top: -15vh;
   left:100vw;
   width: min-content;
 }
@@ -116,7 +116,7 @@ position: absolute;
 #fresh .text{
   left: 0vw;
   width:30vw;
-  top:-25vw;
+  top:-30vw;
 }
 #fresh .text.in-view{
   left: -80vw !important;
@@ -125,7 +125,7 @@ position: absolute;
 #emissions{
   left:100vw;
   width: min-content;
-  top:-15vw;
+  top:-20vw;
 }
 #emissions .img{
   left: 0vw;
@@ -172,7 +172,7 @@ position: absolute;
 
 @media only screen and (max-width: 1520px) {
   #fresh{
-    top: -0vh;
+    top: -10vh;
   }
   #emissions{
     top:-25vh;
