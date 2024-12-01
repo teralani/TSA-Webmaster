@@ -29,10 +29,9 @@ function addScroll(){
     car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+angle+') ');
     imageTrigger(progress);
 }
-
 window.addEventListener("scroll", () => addScroll(),{ passive: true });
 window.onresize = function() {
-    console.log("trig");
+    console.log(window.innerWidth);
     k = (-97.523*(window.innerHeight/window.innerWidth)) + 160;
     maxScroll = k*(window.innerWidth/window.innerHeight);
     addScroll()
@@ -47,7 +46,7 @@ function imageTrigger(progress){
         document.getElementById("farm").querySelector(".img").classList.remove("in-view")
         document.getElementById("farm").querySelector(".text").classList.remove("in-view")
     }
-    if(progress >= 0.25){
+    if(progress >= 0.20){
         document.getElementById("organic").querySelector(".img").classList.add("in-view")
         document.getElementById("organic").querySelector(".text").classList.add("in-view")
     }else{

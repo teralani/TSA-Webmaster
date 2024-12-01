@@ -116,7 +116,7 @@ position: absolute;
 #fresh .text{
   left: 0vw;
   width:30vw;
-  top:-30vw;
+  top:-25vw;
 }
 #fresh .text.in-view{
   left: -80vw !important;
@@ -143,8 +143,12 @@ position: absolute;
 #emissions .text.in-view{
   left: -24vw !important;
 }
-
-
+#line .road{
+  visibility: visible;
+}
+#line .mobile{
+  visibility: hidden;
+}
 .img{
   transform-origin: center center;
   position: relative;
@@ -172,10 +176,10 @@ position: absolute;
 
 @media only screen and (max-width: 1520px) {
   #fresh{
-    top: -10vh;
+    top: -20vh;
   }
   #emissions{
-    top:-25vh;
+    top:-45vh;
   }
 }
 @media only screen and (max-width: 1250px) {
@@ -189,6 +193,26 @@ position: absolute;
     top:-42vh;
   }
 }
-@media only screen and (max-device-width: 480px) {
 
+@media only screen and (max-device-width: 480px) {
+  #line .mobile{
+    visibility: visible;
+    position: absolute;
+    scale: 3;
+  }
+  #line #roadYellow{
+    position: relative;
+    transform: translate(10vw, 0vh);
+  }
+  #line #roadBG{
+    position: absolute;
+    transform: translate(10vw, 0vh);
+  }
+  #line {
+    position: absolute;
+    top:-50vh;
+  }
+  #line .road{
+    visibility: hidden;
+  }
 }
