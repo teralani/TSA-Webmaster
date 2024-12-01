@@ -44,12 +44,12 @@ function scrollUp() {
 }
 
 function show() {
+
     section = (window.scrollY/offsets[0] + offsets[1]) | 0;
     window.scrollBy({top: wrapper[section].getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
     slider = wrapper[section].querySelector(".carousel");
     slider.classList.toggle("hidden");
     slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
-    console.log(slider.previousElementSibling.style.opacity)
 }
 
 function left(e) {
@@ -61,4 +61,4 @@ function right(e) {
     s.scrollBy((s.scrollWidth - s.clientWidth)/4, 0)
 }
 
-document.querySelector(".map").addEventListener("mousedown", () => show())
+// document.querySelector(".map").addEventListener("mousedown", () => show())

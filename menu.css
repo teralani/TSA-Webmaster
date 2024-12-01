@@ -144,7 +144,6 @@ a:visited {
   width:50vh;
   height: 50vh;
   border-radius: 50vh;
-  background-color: white;
   top: 45vh;
   left: center;
   cursor: pointer;
@@ -165,7 +164,7 @@ a:visited {
 }
 
 .slider_wrapper {
-  padding-inline: 19vw;
+  padding-inline: max(19vw, 240px);;
   height:80vh;
   width: 100vw;
   position:relative;
@@ -173,7 +172,7 @@ a:visited {
   display: flex;
   white-space: nowrap;
   flex-direction: row;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-snap-stop: always;
   scroll-snap-type: x proximity;
   scroll-behavior: smooth;
@@ -182,7 +181,7 @@ a:visited {
 .slider_inner {
   height: 100%;
   margin: 0.5vw;
-  min-width: 60vw;
+  min-width: max(60vw, 500px);
   background-color: black;
   border-radius: 6%;
   color: white;
