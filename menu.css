@@ -115,7 +115,7 @@ a {
   }
   .seen {
     top: 0;
-    transition: top 0.75s;
+    transition: top 0.5s;
   }
   .fancy li {
     list-style: none;
@@ -125,7 +125,7 @@ a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     translate: 0 0;
-    transition: translate 0.5s;
+    transition: translate 0.25s;
   }
   .fancy ul {
     display: flex;
@@ -141,11 +141,11 @@ a {
   .map {
     position: fixed;
     z-index: 999;
-    width: 600px;
-    height: 600px;
-    border-radius: 600px;
+    width:50vh;
+    height: 50vh;
+    border-radius: 50vh;
     background-color: white;
     top: 45vh;
-    left: 37vw;
+    left: center;
     cursor: pointer;
   }
