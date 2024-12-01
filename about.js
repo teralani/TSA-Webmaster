@@ -31,7 +31,7 @@ let progress = 0;
 
 function addScroll(){
     if(!mobile){
-        currScroll = ((window.scrollY/window.innerHeight)*100)-50;
+        currScroll = ((window.scrollY/window.innerHeight)*100)-20;
         progress = Math.max(currScroll, 0)/maxScroll;
         point = road.getPointAtLength(progress*roadLength);
         const Dirpoint = road.getPointAtLength((progress+0.01) * roadLength);
