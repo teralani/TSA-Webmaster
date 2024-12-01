@@ -46,6 +46,10 @@ function scrollUp() {
 function show() {
     section = (window.scrollY/offsets[0] + offsets[1]) | 0;
     window.scrollBy({top: wrapper[section].getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
+    slider = wrapper[section].querySelector(".carousel");
+    slider.classList.remove("hidden");
+    slider.previousElementSibling.style.opacity = "0";
+    slider.querySelector(".slider_wrapper").scroll(100, 0)
 
     
 }
