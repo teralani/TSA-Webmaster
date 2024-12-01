@@ -1,4 +1,4 @@
-const wrapper = document.body.querySelectorAll(".wrapper");
+let wrapper = document.body.querySelectorAll(".wrapper");
 
 let section = 1;
 const offsets = [visualViewport.height * 1.2, visualViewport.height *0.5 / visualViewport.height / 1.2]
@@ -47,11 +47,18 @@ function show() {
     section = (window.scrollY/offsets[0] + offsets[1]) | 0;
     window.scrollBy({top: wrapper[section].getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
     slider = wrapper[section].querySelector(".carousel");
-    slider.classList.remove("hidden");
-    slider.previousElementSibling.style.opacity = "0";
-    slider.querySelector(".slider_wrapper").scroll(100, 0)
+    slider.classList.toggle("hidden");
+    slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
+    console.log(slider.previousElementSibling.style.opacity)
+}
 
-    
+function left(e) {
+    s = wrapper[e].querySelector(".slider_wrapper")
+    s.scrollBy(-(s.scrollWidth - s.clientWidth)/4, 0)
+}
+function right(e) {
+    s = wrapper[e].querySelector(".slider_wrapper")
+    s.scrollBy((s.scrollWidth - s.clientWidth)/4, 0)
 }
 
 document.querySelector(".map").addEventListener("mousedown", () => show())
