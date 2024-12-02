@@ -52,13 +52,13 @@ function show() {
     slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
 }
 
-function left(e) {
+function left(e, n) {
     s = wrapper[e].querySelector(".slider_wrapper")
-    s.scrollBy(-(s.scrollWidth - s.clientWidth)/4, 0)
+    s.scrollBy(-(s.scrollWidth - s.clientWidth)/n, 0)
 }
-function right(e) {
+function right(e, n) {
     s = wrapper[e].querySelector(".slider_wrapper")
-    s.scrollBy((s.scrollWidth - s.clientWidth)/4, 0)
+    s.scrollBy((s.scrollWidth - s.clientWidth)/n, 0)
 }
 
 // document.querySelector(".map").addEventListener("mousedown", () => show())
