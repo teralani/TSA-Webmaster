@@ -1,8 +1,9 @@
 
-const road = document.getElementById('roadBG');
-const roadMobile = document.getElementById("roadBGMobile");
+const road = document.querySelector(".line").getElementById('roadBG');
+const roadMobile = document.querySelector(".mobile").getElementById("roadBG");
 
-const car = document.getElementById('car');
+const car = document.querySelector(".line").getElementById('car');
+const carMobile = document.querySelector(".mobile").getElementById('car');
 
 const roadLength = road.getTotalLength();
 const roadMobileLength = roadMobile.getTotalLength();
@@ -39,10 +40,11 @@ function addScroll(){
         car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+angle+') scale(0.7)');
         imageTrigger(progress);
     }else{
-        console.log(progress);
-        progress = window.scrollY/1000;
+        
+        progress = (window.scrollY+10)/(window.innerHeight);
         point = roadMobile.getPointAtLength(progress*roadMobileLength);
-        car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate(' + 180 + ') ');
+        console.log(window.innerHeight*10);
+        carMobile.style.transform = 'translate(' + (point.x + visualViewport.width*0.2) +', ' + point.y + ') rotate(' + 180 + ') scale(2.5vw)';
     }
 }
 window.addEventListener("scroll", () => addScroll(),{ passive: true });
@@ -56,32 +58,32 @@ window.onresize = function() {
 function imageTrigger(progress){
     
     if(progress >= 0.05){
-        document.getElementById("farm").querySelector(".img").classList.add("in-view");
-        document.getElementById("farm").querySelector(".text").classList.add("in-view");
+        document.getElementById("farm").classList.add("in-view");
+        document.getElementById("farm").classList.add("in-view");
     }else{
-        document.getElementById("farm").querySelector(".img").classList.remove("in-view")
-        document.getElementById("farm").querySelector(".text").classList.remove("in-view")
+        document.getElementById("farm").classList.remove("in-view")
+        document.getElementById("farm").classList.remove("in-view")
     }
     if(progress >= 0.20){
-        document.getElementById("organic").querySelector(".img").classList.add("in-view")
-        document.getElementById("organic").querySelector(".text").classList.add("in-view")
+        document.getElementById("organic").classList.add("in-view")
+        document.getElementById("organic").classList.add("in-view")
     }else{
-        document.getElementById("organic").querySelector(".img").classList.remove("in-view")
-        document.getElementById("organic").querySelector(".text").classList.remove("in-view")
+        document.getElementById("organic").classList.remove("in-view")
+        document.getElementById("organic").classList.remove("in-view")
     }
     if(progress >= 0.50){
-        document.getElementById("fresh").querySelector(".img").classList.add("in-view")
-        document.getElementById("fresh").querySelector(".text").classList.add("in-view")
+        document.getElementById("fresh").classList.add("in-view")
+        document.getElementById("fresh").classList.add("in-view")
     }else{
-        document.getElementById("fresh").querySelector(".img").classList.remove("in-view")
-        document.getElementById("fresh").querySelector(".text").classList.remove("in-view")
+        document.getElementById("fresh").classList.remove("in-view")
+        document.getElementById("fresh").classList.remove("in-view")
     }
     if(progress >= 0.70){
-        document.getElementById("emissions").querySelector(".img").classList.add("in-view")
-        document.getElementById("emissions").querySelector(".text").classList.add("in-view")
+        document.getElementById("emissions").classList.add("in-view")
+        document.getElementById("emissions").classList.add("in-view")
     }else{
-        document.getElementById("emissions").querySelector(".img").classList.remove("in-view")
-        document.getElementById("emissions").querySelector(".text").classList.remove("in-view")
+        document.getElementById("emissions").classList.remove("in-view")
+        document.getElementById("emissions").classList.remove("in-view")
     }
 }
 
