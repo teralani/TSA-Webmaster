@@ -1,9 +1,26 @@
-const road = document.getElementById('roadBG');
 
-const car = document.getElementById('car');
+const road = document.querySelector(".line").getElementById('roadBG');
+const roadMobile = document.querySelector(".mobile").getElementById("roadBG");
+
+const car = document.querySelector(".line").getElementById('car');
+const carMobile = document.querySelector(".mobile").getElementById('car');
+
 const roadLength = road.getTotalLength();
-let point = road.getPointAtLength(0*roadLength);
-car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+96+') ');
+const roadMobileLength = roadMobile.getTotalLength();
+let point = 0;
+let angle = 0;
+let mobile = false;
+if(window.innerWidth <= 1100){
+    point = roadMobile.getPointAtLength(0*roadMobileLength); 
+    angle = 180;
+    mobile = true;
+}else{
+    point = road.getPointAtLength(0*roadLength);
+    angle = 96;
+    mobile = false;
+}
+
+car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+ angle +') ');
 
 
 let currScroll = 0;
@@ -14,58 +31,59 @@ let maxScroll = k*(window.innerWidth/window.innerHeight);
 let progress = 0;
 
 function addScroll(){
-
-    currScroll = ((window.scrollY/window.innerHeight)*100)-50;
-
-    
-    progress = Math.max(currScroll, 0)/maxScroll;
-    
-
+    if(!mobile){
+        currScroll = ((window.scrollY/window.innerHeight)*100)-20;
+        progress = Math.max(currScroll, 0)/maxScroll;
+        point = road.getPointAtLength(progress*roadLength);
+        const Dirpoint = road.getPointAtLength((progress+0.01) * roadLength);
+        let angle = 90+Math.atan2((Dirpoint.y-point.y),(Dirpoint.x-point.x))*(180/Math.PI);
+        car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+angle+') scale(0.7)');
+        imageTrigger(progress);
+    }else{
         
-    point = road.getPointAtLength(progress*roadLength);
-
-    const Dirpoint = road.getPointAtLength((progress+0.01) * roadLength);
-    let angle = 90+Math.atan2((Dirpoint.y-point.y),(Dirpoint.x-point.x))*(180/Math.PI);
-    car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+angle+') ');
-    imageTrigger(progress);
+        progress = (window.scrollY+10)/(window.innerHeight);
+        point = roadMobile.getPointAtLength(progress*roadMobileLength);
+        console.log(window.innerHeight*10);
+        carMobile.style.transform = 'translate(' + (point.x + visualViewport.width*0.2) +', ' + point.y + ') rotate(' + 180 + ') scale(2.5vw)';
+    }
 }
 window.addEventListener("scroll", () => addScroll(),{ passive: true });
 window.onresize = function() {
-    console.log(window.innerWidth);
     k = (-97.523*(window.innerHeight/window.innerWidth)) + 160;
     maxScroll = k*(window.innerWidth/window.innerHeight);
     addScroll()
+    mobile = window.innerWidth <= 1100;
 }
 
 function imageTrigger(progress){
     
     if(progress >= 0.05){
-        document.getElementById("farm").querySelector(".img").classList.add("in-view");
-        document.getElementById("farm").querySelector(".text").classList.add("in-view");
+        document.getElementById("farm").classList.add("in-view");
+        document.getElementById("farm").classList.add("in-view");
     }else{
-        document.getElementById("farm").querySelector(".img").classList.remove("in-view")
-        document.getElementById("farm").querySelector(".text").classList.remove("in-view")
+        document.getElementById("farm").classList.remove("in-view")
+        document.getElementById("farm").classList.remove("in-view")
     }
     if(progress >= 0.20){
-        document.getElementById("organic").querySelector(".img").classList.add("in-view")
-        document.getElementById("organic").querySelector(".text").classList.add("in-view")
+        document.getElementById("organic").classList.add("in-view")
+        document.getElementById("organic").classList.add("in-view")
     }else{
-        document.getElementById("organic").querySelector(".img").classList.remove("in-view")
-        document.getElementById("organic").querySelector(".text").classList.remove("in-view")
+        document.getElementById("organic").classList.remove("in-view")
+        document.getElementById("organic").classList.remove("in-view")
     }
     if(progress >= 0.50){
-        document.getElementById("fresh").querySelector(".img").classList.add("in-view")
-        document.getElementById("fresh").querySelector(".text").classList.add("in-view")
+        document.getElementById("fresh").classList.add("in-view")
+        document.getElementById("fresh").classList.add("in-view")
     }else{
-        document.getElementById("fresh").querySelector(".img").classList.remove("in-view")
-        document.getElementById("fresh").querySelector(".text").classList.remove("in-view")
+        document.getElementById("fresh").classList.remove("in-view")
+        document.getElementById("fresh").classList.remove("in-view")
     }
     if(progress >= 0.70){
-        document.getElementById("emissions").querySelector(".img").classList.add("in-view")
-        document.getElementById("emissions").querySelector(".text").classList.add("in-view")
+        document.getElementById("emissions").classList.add("in-view")
+        document.getElementById("emissions").classList.add("in-view")
     }else{
-        document.getElementById("emissions").querySelector(".img").classList.remove("in-view")
-        document.getElementById("emissions").querySelector(".text").classList.remove("in-view")
+        document.getElementById("emissions").classList.remove("in-view")
+        document.getElementById("emissions").classList.remove("in-view")
     }
 }
 

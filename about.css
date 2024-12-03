@@ -8,36 +8,44 @@ html::-webkit-scrollbar {
   display: none;
 }
 body{
-background:rgb(255, 255, 255);
-margin:0;
+background-image:url("resources/about\ background.jpg");
+background-repeat: no-repeat;
+background-size: 100vw;
 }
 
 
-/* road stuff */
-#line{
+/*dfsadsa road stuff */
+.line{
   height:auto;
   position: absolute;
 }
-#roadYellow{
+.line #roadYellow{
 /* position:absolute; */
 top:50vh;
 overflow:visible;
 stroke-dasharray: 1vh;
 position: absolute;
 }
-#roadBG{
+.line #roadBG{
   /* position:absolute; */
   top:50vh;
   overflow:visible;
   height: auto;
   position: absolute;
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
 }
-
-/* car */
 #car{
+  position: absolute;
+  height:100vh;
+}
+/* car */
+#innerCar{
   position: fixed;
   transform-origin: 0, 0;
-  transform: rotate(30) translate(1, 1);
+
+  transform: rotate(30) translate(1, 1) scale(0.7);
+  color: red;
   /* scale:0.5; */
 }
 
@@ -48,127 +56,62 @@ position: absolute;
 }
 .about-stuff{
   position:relative;
+  background-color: white;
 }
 /* pictures */
 /* .in-view{
   transition:left 0.5s ease-in-out, width 0.5s ease-in-out, opacity 0.5s cubic-bezier(1,-0.04,1,.54);
 } */
 
-#farm{
-  left:100vw;
-  width: min-content;
-  margin-top:40vh;
-  /* margin-bottom: max(60vh, 50vw); */
-}
-#farm .img{
-  left: 0vw;
-}
-#farm .img.in-view{
-  width:25vw !important;
-  left: -30vw !important;
-}
-#farm .text{
-  left: 0vw;
-  width:30vw;
-  top: -10vw;
-}
-#farm .text.in-view{
+.about-stuff{
+  background-color: rgb(0, 0, 0);
+  width: 55vw;
+  display:flex;
+  justify-content: space-evenly;
+  padding-block: 2%;
+  padding-inline: 1%;
+  border-radius: 30px;
+  flex-wrap: wrap;
+  transition: right 1s ease;
   
-  left: -60vw !important;
+  p {
+    width: 25vw;
+    color: black;
+    position: relative;
+    transform-origin: center center;
+    position: relative;
+    height: auto;
+    border-radius: 30px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.1vw;
+    opacity: 0%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  img {
+    position: relative;
+    width: 40%; 
+  }
 }
-
-#organic{
-  left:100vw;
-  width: min-content;
-  margin-bottom: 30vh;  
+#farm{
+  width: 50vw;
+  top: 30vh;
+  right: -100vw;
 }
-#organic .img{
-  left: 0vw;
-  top: -10vw;
+.in-view#farm{
+  right: -45vw;
+  transition: right 1s ease;
+  p{
+    opacity: 100%;
+  }
 }
-#organic .img.in-view{
-  width:25vw !important;
-  left: -30vw !important;
-}
-#organic .text{
-  left: 0vw;
-  width: 25vw;
-  top: -10vw;
-  /* margin-top: max(20vw, 22vh); */
-}
-#organic .text.in-view{
-  left: -30vw !important;
-}
-
-#fresh{
-  top: -15vh;
-  left:100vw;
-  width: min-content;
-}
-#fresh .img{
-  left: 0vw;
-  top:-20vh;
-}
-#fresh .img.in-view{
-  width:25vw !important;
-  left: -50vw !important;
-}
-#fresh .text{
-  left: 0vw;
-  width:30vw;
-  top:-25vw;
-}
-#fresh .text.in-view{
-  left: -80vw !important;
-}
-
-#emissions{
-  left:100vw;
-  width: min-content;
-  top:-20vw;
-}
-#emissions .img{
-  left: 0vw;
-  top: -5vw;
-}
-#emissions .img.in-view{
-  width:25vw !important;
-  left: -50vw !important;
-}
-#emissions .text{
-  left: 0vw;
-  width:25vw;
-  top:-20vw;
-}
-#emissions .text.in-view{
-  left: -24vw !important;
-}
-#line .road{
+.line{
   visibility: visible;
 }
-#line .mobile{
+.mobile{
   visibility: hidden;
 }
-.img{
-  transform-origin: center center;
-  position: relative;
-  width: 10vw;
-  height: auto;
-  border-radius: 30px;
 
-  transition:left 0.5s ease-in-out, width 0.5s ease-in-out;
-}
-.text{
-  transform-origin: center center;
-  position: relative;
-  height: auto;
-  border-radius: 30px;
-  font-family:'Courier New', Courier, monospace;
-  font-size: 1.1vw;
-  opacity: 0%;
-  
-  transition:left 0.5s ease-in-out, opacity 0.5s cubic-bezier(0,0.75,0,0.75);
-}
+
 .text.in-view{
   opacity: 100% !important;
   transition:left 0.5s ease-in-out, opacity 0.5s cubic-bezier(0.75,0,0.75,0);
@@ -194,25 +137,48 @@ position: absolute;
   }
 }
 
-@media only screen and (max-device-width: 480px) {
-  #line .mobile{
+@media only screen and (max-device-width: 1100px) {
+  #navbar{
+    position: fixed !important;
+    top:0 !important;
+  }
+  .line {
+    margin-top: 4vh;
+    position: fixed;
+  }
+  .mobile{
     visibility: visible;
     position: absolute;
     scale: 3;
   }
-  #line #roadYellow{
+  .mobile #roadYellow{
     position: relative;
     transform: translate(10vw, 0vh);
   }
-  #line #roadBG{
+  .mobile #roadBG{
     position: absolute;
     transform: translate(10vw, 0vh);
   }
-  #line {
+  .mobile{
     position: absolute;
-    top:-50vh;
+    top:-40vh;
   }
-  #line .road{
+  .line{
     visibility: hidden;
+  }
+  .img{
+    width: 20vw;
+    top: 10vh;
+    opacity: 0%;
+    transition:top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  .img .in-view{
+    opacity: 100%;
+    top: 0vh;
+    transition:top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  #car{
+    position: fixed;
+    transform: rotate(180) translate(20, 100) scale(2.5vw);
   }
 }

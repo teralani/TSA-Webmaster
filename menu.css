@@ -1,3 +1,11 @@
+:root {
+  --bg1: rgba(42, 56, 50, 0.452);
+  --bg2: rgba(73, 51, 38, 0.253)
+}
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .wrapper {
     height: 120vh;
     width: 100vw;
@@ -89,63 +97,189 @@
 a {
     text-decoration: none;
   }
-  a:visited {
-    color: inherit;
+a:visited {
+  color: inherit;
+}
+#navbar {
+  position:relative;
+}
+@media only screen and (max-width: 1100px){
+  .fancy {
+    display: none;
   }
-  #navbar {
-    position:relative;
+}
+.fancy {
+  top:-8vh;
+  position: fixed;
+  height: 8vh;
+  width: 60vw;
+  background-color: rgba(66, 63, 57, 0.8);
+  backdrop-filter: blur(25px);
+  z-index: 9999;
+  border-radius: 10px;
+  border: 1.5px rgb(75, 75, 75) solid;
+  left: 20vw;
+  align-content: center;
+}
+.seen {
+  top: 0;
+  transition: top 0.5s;
+}
+.fancy li {
+  list-style: none;
+  color: white;
+  margin-inline: 3vw;
+  font-size: min(100px, 1.5vw);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  translate: 0 0;
+  transition: translate 0.25s;
+}
+.fancy ul {
+  display: flex;
+  justify-content: space-around;
+}
+.fancy li:hover {
+  cursor:pointer;
+  text-shadow: 0 2px 20px white;
+  translate: 0 0.35vh;
+}
+
+
+.map {
+  position: fixed;
+  z-index: 999;
+  width:50vh;
+  height: 50vh;
+  border-radius: 50vh;
+  top: 45vh;
+  left: center;
+  cursor: pointer;
+}
+
+.carousel {
+  opacity: 1;
+  margin-top: 10vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height:fit-content;
+  position: relative;
+  list-style-type: none;
+  align-self: center;
+  visibility: visible;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.slider_wrapper {
+  padding-inline: max(19vw, 240px);;
+  height:80vh;
+  width: 100vw;
+  position:relative;
+  overflow-y: clip;
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row;
+  overflow-x: hidden;
+  scroll-snap-stop: always;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+}
+
+.slider_inner {
+  height: 100%;
+  margin: 0.5vw;
+  min-width: max(60vw, 500px);
+  background-color: var(--bg1);
+  /* background-color:rgba(73, 51, 38, 0.253); */
+  backdrop-filter: blur(25px);
+
+
+  border-radius: 6%;
+  color: white;
+  align-content: center;
+  text-align: center;
+  font-size: 10rem;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .img{
+    width: max(30vw, 40vh);
+    height: max(30vw, 40vh);
+    /* background-color: red; */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
-  @media only screen and (max-width: 1100px){
-    .fancy {
-      display: none;
+  .description{
+    width: 25vw;
+    height: auto;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h1{
+      font-size: 2.5vw;
+      text-wrap: wrap;
+      padding-bottom: 8%;
+      border-bottom: 3px rgb(224, 188, 164) solid;
+    }
+    p {
+      padding-inline: 5%;
+      font-size: 1.8vw;
+      width: 100%;
+      text-wrap:wrap;
+      text-align: center;
+    }
+    #price {
+      border-top: 3px rgb(224, 188, 164) solid;
+      text-align: center;
+      font-size: 2vw;
+      width: 100%;
+      padding-top: 8%;
     }
   }
-  .fancy {
-    top:-8vh;
-    position: fixed;
-    height: 8vh;
-    width: 60vw;
-    background-color: rgba(66, 63, 57, 0.8);
-    backdrop-filter: blur(25px);
-    z-index: 9999;
-    border-radius: 10px;
-    border: 1.5px rgb(75, 75, 75) solid;
-    left: 20vw;
-    align-content: center;
-  }
-  .seen {
-    top: 0;
-    transition: top 0.5s;
-  }
-  .fancy li {
-    list-style: none;
-    color: white;
-    margin-inline: 3vw;
-    font-size: min(100px, 1.5vw);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    translate: 0 0;
-    transition: translate 0.25s;
-  }
-  .fancy ul {
-    display: flex;
-    justify-content: space-around;
-  }
-  .fancy li:hover {
-    cursor:pointer;
-    text-shadow: 0 2px 20px white;
-    translate: 0 0.35vh;
-  }
+}
+
+.controls {
+  padding-inline: 2vw;;
+  position: absolute;
+  align-self: center;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+.controls div {
+  width: max(5vw, 3vh);
+  height: max(5vw, 3vh);
+  border-radius: max(5vw, 10vh);
+  /* background-color: rgba(41, 41, 41, 0.582);
+  backdrop-filter: blur(25px);
+  border: 2px rgba(53, 53, 53, 0.315) solid; */
+  background-image:url('data:image/svg+xml,<svg fill="%23a1a1a1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 462.85 462.85" xml:space="preserve" stroke="%23ffffff" stroke-width="0.00462847"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="%23CCCCCC" stroke-width="3.702776"></g><g id="SVGRepo_iconCarrier"><g><g><path d="M257.261,88.679c-1.635-2.034-3.428-3.405-5.281-4.258c-5.586-4.25-13.649-5.319-20.253,0.794 C156.973,154.431,77.815,218.764,4.669,289.735c-4.961,4.81-5.558,10.542-3.702,15.463c0.363,2.828,1.485,5.683,3.702,8.333 c17.61,21.018,36.122,41.223,55.467,60.667c8.325,8.363,19.296,4.219,24.138-3.494c48.362-40.649,96.253-87.062,144.664-127.66 c46.263,46.052,98.673,90.438,146.659,134.622c5.383,4.951,11.73,5.149,16.92,2.772c4.936-0.376,9.455-3.361,12.781-7.662 c15.615-20.216,32.077-39.746,49.231-58.677c7.814-4.763,12.126-15.884,3.793-24.358 C391.827,222.103,316.886,162.896,257.261,88.679z M386.993,346.025c-47.073-42.157-97.574-85.62-141.874-130.824 c-2.306-2.356-4.834-3.656-7.373-4.248c-5.578-3.786-13.348-4.674-19.883,0.779c-49.129,41.015-97.627,87.976-146.558,129.219 c-12.002-12.446-23.577-25.293-34.901-38.364c66.443-63.515,137.316-122.143,205.155-184.145 c55.127,66.511,122.171,121.356,183.386,182.017C411.859,315.293,399.251,330.502,386.993,346.025z"></path></g></g></g></svg>');
+  background-size: 3vw 3vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#left{transform:rotate(-90deg)}
+#right{transform:rotate(90deg)}
+.controls div:hover{
+  cursor: pointer;
+}
 
 
-  .map {
-    position: fixed;
-    z-index: 999;
-    width:50vh;
-    height: 50vh;
-    border-radius: 50vh;
-    background-color: white;
-    top: 45vh;
-    left: center;
-    cursor: pointer;
-  }
+
+.hidden {
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+}

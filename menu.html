@@ -121,11 +121,37 @@
       </ul>
     </div>
     <div id="scroll-up" onclick="scrollUp()"></div>
-    <div class="map"></div>
+    <div style="display:flex; justify-content: center;">
+      <div class="map" onclick=""></div>
+    </div>
     <div id="appetizer" class="wrapper">
       <div class="container">
           <div class="img_wrapper">
           </div>
+      </div>
+      <div class="carousel hidden">
+        <div class="slider_wrapper">
+          <div class="slider_inner">
+              <div class="img" style="background-image: url('resources/spring\ rolls.png');"></div>
+              <div class="description">
+                <h1>Spring Rolls (5pcs)</h1>
+                <p>Grated carrots, lettuce, tofu, bean sprouts, green onions, and fresh basil wrapped in rice paper. Served with our house chili ginger dressing.</p>
+                <p id="price">$12</p>
+              </div>
+          </div>
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          </div>
+        <div class="controls">
+          <div id="left" onclick="left(0, 3)"></div>
+          <div id="right" onclick="right(0, 3)"></div>
+        </div>
       </div>
     </div>
     <div id="entrees" class="wrapper">
@@ -133,17 +159,85 @@
           <div class="img_wrapper">
           </div>
       </div>
+      <div class="carousel hidden">
+        <div class="slider_wrapper">
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+            <div class="img"></div>
+            <div class="description"></div>
+          </div>
+          </div>
+        <div class="controls">
+          <div id="left" onclick="left(1, 4)"></div>
+          <div id="right" onclick="right(1, 4)"></div>
+        </div>
+      </div>
     </div>
     <div id="noodles" class="wrapper">
       <div class="container">
           <div class="img_wrapper">
           </div>
       </div>
+      <div class="carousel hidden">
+        <div class="slider_wrapper">
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+            <div class="img"></div>
+            <div class="description"></div>
+          </div>
+          </div>
+        <div class="controls">
+          <div id="left" onclick="left(2, 4)"></div>
+          <div id="right" onclick="right(2, 4)"></div>
+        </div>
+      </div>
     </div>
     <div id="dessert" class="wrapper">
       <div class="container">
           <div class="img_wrapper">
           </div>
+      </div>
+      <div class="carousel hidden">
+        <div class="slider_wrapper">
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          <div class="slider_inner">
+              <div class="img"></div>
+              <div class="description"></div>
+          </div>
+          </div>
+        <div class="controls">
+          <div id="left" onclick="left(3, 3)"></div>
+          <div id="right" onclick="right(3, 3)"></div>
+        </div>
       </div>
     </div>
 </body>

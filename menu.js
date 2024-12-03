@@ -1,7 +1,7 @@
-const wrapper = document.body.querySelectorAll(".wrapper");
+let wrapper = document.body.querySelectorAll(".wrapper");
 
 let section = 1;
-const offsets = [visualViewport.height * 1.2, visualViewport.height *0.5 / visualViewport.height / 1.2]
+const offsets = [window.innerHeight * 1.2, visualViewport.height *0.5 / visualViewport.height / 1.2]
 
 function parallax() {
     if (scrollY >= visualViewport.height * 0.15){
@@ -43,11 +43,21 @@ function scrollUp() {
     window.scroll({top: 0, left: 0, behavior: "smooth"})
 }
 
-function show() {
-    section = (window.scrollY/offsets[0] + offsets[1]) | 0;
+function show(e) {
+    section = ((window.scrollY + e.clientY)/offsets[0]) | 0;
     window.scrollBy({top: wrapper[section].getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
-
-    
+    slider = wrapper[section].querySelector(".carousel");
+    slider.classList.toggle("hidden");
+    slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
 }
 
-document.querySelector(".map").addEventListener("mousedown", () => show())
+function left(e, n) {
+    s = wrapper[e].querySelector(".slider_wrapper")
+    s.scrollBy(-(s.scrollWidth - s.clientWidth)/n, 0)
+}
+function right(e, n) {
+    s = wrapper[e].querySelector(".slider_wrapper")
+    s.scrollBy((s.scrollWidth - s.clientWidth)/n, 0)
+}
+
+document.querySelector(".map").addEventListener("mousedown", (e) => show(e))
