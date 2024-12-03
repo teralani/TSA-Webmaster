@@ -4,6 +4,10 @@ html {
   -ms-overflow-style: none; 
   scrollbar-width: none;
 }
+:root {
+  --bg1: rgba(42, 56, 50, 0.452);
+  --bg2: rgba(73, 51, 38, 0.253)
+}
 html::-webkit-scrollbar {
   display: none;
 }
@@ -64,19 +68,22 @@ position: absolute;
 } */
 
 .about-stuff{
-  background-color: rgb(0, 0, 0);
-  width: 55vw;
+  background-color: rgba(4, 4, 4, 0.5);
+  backdrop-filter: blur(25px);
+  
+  width: 45vw;
   display:flex;
   justify-content: space-evenly;
   padding-block: 2%;
-  padding-inline: 1%;
+  /* padding-inline: 1%; */
   border-radius: 30px;
   flex-wrap: wrap;
   transition: right 1s ease;
-  
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
   p {
-    width: 25vw;
-    color: black;
+    width: 22vw;
+    color: white;
     position: relative;
     transform-origin: center center;
     position: relative;
@@ -89,8 +96,10 @@ position: absolute;
   }
   img {
     position: relative;
-    width: 40%; 
+    width: 18vw; 
+    border-radius: 20px;
   }
+  
 }
 #farm{
   width: 50vw;
@@ -102,6 +111,67 @@ position: absolute;
   transition: right 1s ease;
   p{
     opacity: 100%;
+  }
+}
+#organic{
+  width: 28vw;
+  top: 45vh;
+  right: -100vw;
+}
+.in-view#organic{
+  right: -70vw;
+  transition: right 1s ease;
+  p{
+    opacity: 100%;
+  }
+}
+#fresh{
+  width: 50vw;
+  top: 60vh;
+  right: -100vw;
+}
+.in-view#fresh{
+  right: -40vw;
+  transition: right 1s ease;
+  p{
+    opacity: 100%;
+  }
+}
+#emissions{
+  width: 45vw;
+  top: 65vh;
+  right: -100vw;
+}
+.in-view#emissions{
+  right: -50vw;
+  transition: right 1s ease;
+  p{
+    opacity: 100%;
+  }
+}
+@media only screen and (max-width: 1520px) {
+  #fresh{
+    top: 55vh;
+  }
+  #emissions{
+    top: 60vh;
+  }
+  .in-view#emissions{
+    right: -55vw;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #organic{
+    top: 32vh;
+  }
+  #fresh{
+    top: 35vh;
+  }
+  #emissions{
+    top: 39vh;
+  }
+  .in-view#emissions{
+    right: -55vw;
   }
 }
 .line{
@@ -116,15 +186,7 @@ position: absolute;
   opacity: 100% !important;
   transition:left 0.5s ease-in-out, opacity 0.5s cubic-bezier(0.75,0,0.75,0);
 }
-
-@media only screen and (max-width: 1520px) {
-  #fresh{
-    top: -20vh;
-  }
-  #emissions{
-    top:-45vh;
-  }
-}
+/*
 @media only screen and (max-width: 1250px) {
   #fresh{
     top: -19vh;
@@ -135,7 +197,7 @@ position: absolute;
   #emissions{
     top:-42vh;
   }
-}
+} */
 
 @media only screen and (max-device-width: 1100px) {
   #navbar{
