@@ -10,13 +10,16 @@
     <script defer src="navbar.js"></script>
 </head>
 <style>
+    html {
+      overflow-x: clip !important;
+    }
     * {
       box-sizing: border-box;
     }
     body {
       background-color: rgb(255, 255, 255);
       margin: 0px;
-      overflow-x: clip;
+      overflow-x: clip !important;
     }
     a {
       text-decoration: none;
@@ -116,49 +119,51 @@
         </div>
     </div>
 
-    <svg  id="line" style= "padding-top:50vh;"viewBox="0 -10 800 2000" preserveAspectRatio="none">
+    <svg  class="line" style= "padding-top:50vh;"viewBox="0 -10 800 2000" preserveAspectRatio="none">
   
-      <path id="roadBG" class="road"
+      <path id="roadBG" 
       d="M -5 4 C 342 32 315 378 330 423 C 366 544 547 547 537 453 C 531 372 455 325 358 347 C 213 379 133 427 92 572 C 58 714 254 988 1067 957"
       fill="none" stroke="grey" stroke-width="2vh" />
   
-      <path id="roadYellow" class="road"
+      <path id="roadYellow"
       d="M -5 4 C 342 32 315 378 330 423 C 366 544 547 547 537 453 C 531 372 455 325 358 347 C 213 379 133 427 92 572 C 58 714 254 988 1067 957"
       fill="none" stroke="yellow" style="stroke-dasharray: 1vh;"stroke-width="0.2vh" />
-      
-      <path id="roadBGMobile" class="mobile"
-      d="M 0 0 L 0 1000"
-      fill="none" stroke="grey" stroke-width="6vh" />
-      
-      <path id="roadYellowMobile" class="mobile"
-      d="M 0 0 L 0 1000"
-      fill="none" stroke="yellow" style="stroke-dasharray: 1vh;"stroke-width="0.5vh" />
   
       <path stroke="dark-grey" id="car"d="m 4.168 -26.688 l 3.418 0.8359 l 1.5703 1.8477 h -0.7617 l -1.2305 -1.3945 l -1.5859 -0.3828 l 0.0273 0.457 l 2.2891 1.4375 h 1.3516 l 0.3516 0.4258 l 0.1758 1.4688 l 0.7188 0.9844 v 8.4961 l -0.293 0.7031 v 2.1719 l 0.8789 1.2617 l 0.1172 1.2617 l -0.5859 0.4258 l -0.6445 -0.7031 l -0.3086 32.16 l -0.8633 1.9219 h -1.3789 c 0 -7.6133 -0.0156 -18.398 -0.0273 -26.016 c -4.9141 0.0156 -9.8281 0.0156 -14.762 0 c 0 7.6133 -0.0156 18.398 -0.0156 26.016 h -1.3945 l -0.8633 -1.9219 l -0.293 -32.16 l -0.6445 0.7031 l -0.6016 -0.4258 l 0.1172 -1.2617 l 0.8945 -1.2617 v -2.1719 l -0.293 -0.7031 l -0.0078 -8.5 l 0.7031 -0.9844 l 0.1758 -1.4688 l 0.3516 -0.4258 h 1.3633 l 2.2734 -1.4375 l 0.0273 -0.457 l -1.5703 0.3828 l -1.2461 1.3945 h -0.75 l 1.5547 -1.8477 l 3.4336 -0.8359 c 2.7812 0.0039 5.5547 0.0039 8.3281 0.0039 z m 3.0781 53.375 h -14.496 v -1.1445 l 0.6875 0.0156 l 0.0039 -24.445 h 0.6328 v 24.461 l 0.6172 0.0156 l -0.0039 -24.477 h 0.6328 v 24.473 l 0.6758 0.0156 l -0.0039 -24.488 h 0.6445 v 24.504 l 0.6016 0.0156 l 0.0039 -24.52 h 0.6445 v 24.52 l 0.5898 0.0156 v -24.535 h 0.6328 v 24.547 h 0.6133 v -24.547 h 0.6328 v 24.547 h 0.6758 l -0.0039 -24.547 h 0.6328 v 24.531 l 0.6133 -0.0156 v -24.516 h 0.6328 v 24.504 h 0.6758 v -24.504 h 0.6445 v 24.488 l 0.6016 -0.0156 v -24.473 h 0.6328 v 24.461 h 0.6875 v -24.461 h 0.6328 v 24.445 l 0.4688 -0.0156 v 1.1445 z m -0.9531 -35.652 l 0.8516 -0.7461 l 0.8086 -2.5547 s -0.543 -0.5 -2.0664 -0.9102 c -1.9219 -0.5273 -9.8281 -0.5273 -11.754 0 c -1.5391 0.4102 -2.0664 0.9102 -2.0664 0.9102 l 0.793 2.5547 l 0.8672 0.7461 c 4.3945 -0.0586 8.1523 -0.0586 12.566 0 z m -14.598 7.3203 v -3.9922 c 0.0156 -2.4648 -0.0273 -4.2852 -0.4688 -5.5156 l -0.1758 0.8516 l 0.0273 9.1094 z m 16.625 0 l -0.0156 -3.9922 c 0 -2.4648 0.043 -4.2852 0.4688 -5.5156 l 0.1758 0.8516 l -0.0156 9.1094 z"  fill-rule="evenodd"/>
   
     </svg>
-
+    <svg  class="mobile" style= "padding-top:50vh;"viewBox="0 -10 800 2000" preserveAspectRatio="none">
+      
+      <path id="roadBG"
+      d="M 0 0 L 0 1000"
+      fill="none" stroke="grey" stroke-width="6vh" />
+      
+      <path id="roadYellow" 
+      d="M 0 0 L 0 1000"
+      fill="none" stroke="yellow" style="stroke-dasharray: 1vh;"stroke-width="0.5vh" />
+      <path stroke="dark-grey" id="car"d="m 4.168 -26.688 l 3.418 0.8359 l 1.5703 1.8477 h -0.7617 l -1.2305 -1.3945 l -1.5859 -0.3828 l 0.0273 0.457 l 2.2891 1.4375 h 1.3516 l 0.3516 0.4258 l 0.1758 1.4688 l 0.7188 0.9844 v 8.4961 l -0.293 0.7031 v 2.1719 l 0.8789 1.2617 l 0.1172 1.2617 l -0.5859 0.4258 l -0.6445 -0.7031 l -0.3086 32.16 l -0.8633 1.9219 h -1.3789 c 0 -7.6133 -0.0156 -18.398 -0.0273 -26.016 c -4.9141 0.0156 -9.8281 0.0156 -14.762 0 c 0 7.6133 -0.0156 18.398 -0.0156 26.016 h -1.3945 l -0.8633 -1.9219 l -0.293 -32.16 l -0.6445 0.7031 l -0.6016 -0.4258 l 0.1172 -1.2617 l 0.8945 -1.2617 v -2.1719 l -0.293 -0.7031 l -0.0078 -8.5 l 0.7031 -0.9844 l 0.1758 -1.4688 l 0.3516 -0.4258 h 1.3633 l 2.2734 -1.4375 l 0.0273 -0.457 l -1.5703 0.3828 l -1.2461 1.3945 h -0.75 l 1.5547 -1.8477 l 3.4336 -0.8359 c 2.7812 0.0039 5.5547 0.0039 8.3281 0.0039 z m 3.0781 53.375 h -14.496 v -1.1445 l 0.6875 0.0156 l 0.0039 -24.445 h 0.6328 v 24.461 l 0.6172 0.0156 l -0.0039 -24.477 h 0.6328 v 24.473 l 0.6758 0.0156 l -0.0039 -24.488 h 0.6445 v 24.504 l 0.6016 0.0156 l 0.0039 -24.52 h 0.6445 v 24.52 l 0.5898 0.0156 v -24.535 h 0.6328 v 24.547 h 0.6133 v -24.547 h 0.6328 v 24.547 h 0.6758 l -0.0039 -24.547 h 0.6328 v 24.531 l 0.6133 -0.0156 v -24.516 h 0.6328 v 24.504 h 0.6758 v -24.504 h 0.6445 v 24.488 l 0.6016 -0.0156 v -24.473 h 0.6328 v 24.461 h 0.6875 v -24.461 h 0.6328 v 24.445 l 0.4688 -0.0156 v 1.1445 z m -0.9531 -35.652 l 0.8516 -0.7461 l 0.8086 -2.5547 s -0.543 -0.5 -2.0664 -0.9102 c -1.9219 -0.5273 -9.8281 -0.5273 -11.754 0 c -1.5391 0.4102 -2.0664 0.9102 -2.0664 0.9102 l 0.793 2.5547 l 0.8672 0.7461 c 4.3945 -0.0586 8.1523 -0.0586 12.566 0 z m -14.598 7.3203 v -3.9922 c 0.0156 -2.4648 -0.0273 -4.2852 -0.4688 -5.5156 l -0.1758 0.8516 l 0.0273 9.1094 z m 16.625 0 l -0.0156 -3.9922 c 0 -2.4648 0.043 -4.2852 0.4688 -5.5156 l 0.1758 0.8516 l -0.0156 9.1094 z"  fill-rule="evenodd"/>
+  
+    </svg>
     <div id="parent">
       <div class="about-stuff" id="farm">
-        <img class="img" src="resources/pexels-pixabay-325944.jpg">
         <p class="text">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
+        <img class="img" src="resources/pexels-pixabay-325944.jpg">
       </div>
 
-      <!-- TODO change this image to something -->
-      <div class="about-stuff" id="organic">
+      <!-- <div class="about-stuff" id="organic">
         <img class="img" src="resources/pexels-pixabay-325944.jpg">
         <p class="text">This image will be changed text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
       </div>
-      <!-- insert something -->
+    
       <div class="about-stuff" id="fresh">
         <img class="img" src="resources/pexels-pixabay-325944.jpg">
         <p class="text">This image will be changed text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
       </div>
-      <!-- emissions -->
+    
       <div class="about-stuff" id="emissions">
         <img class="img" src="resources/pexels-pixabay-325944.jpg">
         <p class="text">This image will be changed text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
-      </div>
+      </div> -->
     </div>
   </body>
 
