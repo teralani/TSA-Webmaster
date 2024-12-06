@@ -1,0 +1,53 @@
+body{
+    justify-content: space-evenly;
+}
+.menu_item{
+    position: relative;
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 98vw;
+    border-radius: 20px;
+    background: #0000003a;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .left{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .img{
+            position: relative;
+            max-width: 100%;
+            max-height: 100%;
+            width: 8vw;
+        }
+        .name{
+            position: relative;
+            font-family:'Courier New', Courier, monospace;
+            font-size: 5vh;
+        }
+    }
+    
+    .quantity-selector{
+        
+        position: relative;
+        display:flex;
+        align-items:center;
+        justify-content: space-evenly;
+        margin-right: 2%;
+        .price{
+            position: relative;
+            font-family:'Courier New', Courier, monospace;
+            font-size: 150%;
+            margin-right: 20%;
+        }
+        .number{
+            width: 3vw;
+            position: relative;
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+    }
+    
+}
+
