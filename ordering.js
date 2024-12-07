@@ -1,10 +1,29 @@
+let bill = new Map();
+
 function plus(item){
-	// console.log("plu");
-	let label = document.getElementById(item + "Num");
-	// console.log(label.innerText);
-	label.innerText = (parseInt(label.innerText) + 1);
+	update(item, true);
 }
 function minus(item){
-	let label = document.getElementById(item + "Num");
-	label.innerText = (Math.max(0, parseInt(label.innerText) - 1));
+	update(item, false);
+}
+function update(item, add){
+	let parent = document.getElementById(item).querySelector(".quantity-selector")
+	let num = parent.querySelector(".number");
+	num.innerText = (Math.max(0, parseInt(num.innerText) + (1*add?1:-1)));
+
+	let price = parent.querySelector(".price");
+	bill.set(item, [num.innerText, parseInt(price.innerText.substring(1)) * parseInt(num.innerText)]);
+	calcTotal();
+}
+function calcTotal(){
+	let total = 0;
+	for (let [key, value] of bill) {
+		total += value[1];
+	}
+	document.getElementById("total").innerText = "total: $" + total;
+}
+function updateBill(){
+	for (let [item, str] of bill) {
+		console.log(key + " is " + value);
+	}
 }

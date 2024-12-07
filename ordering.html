@@ -1,10 +1,9 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webmaster - Ordering</title>
-    <script defer src="about.js"></script>
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="ordering.css" />
     <script defer src="navbar.js"></script>
@@ -35,9 +34,9 @@
         <div class="" id="nav_buttons">
           
           <li class="nav_items selected"><a href="/menu.html">Menu</a></li>
-          <li class="nav_items"><a  href="/ordering.html">Ordering</a></li>
+          <li class="nav_items"><a>Ordering</a></li>
           <li class="nav_items"><a href="/about.html">About</a></li>
-          <li class="nav_items"><a href="https://youtu.be/tXEPbotEjZE?si=Idfr6KQZjI-IycSe" target="_blank">Contact</a></li>
+          <li class="nav_items"><a href="/contact.html">Contact</a></li>
           <li class="nav_items"><a>Sources</a></li>
         </div>
         <div class="burger" onclick="showOptions()" style="width: min-content">
@@ -119,43 +118,43 @@
           </svg>
         </div>
       </div>
-      <div class="menu_item" id="springRolls">
-        <div class="left">
+    
+    <div class="menu_item" id="springRolls">
+        <div class="item-description">
           <img class="img" src="resources/spring rolls.png">
           <p class="name">Spring Rolls</p>
         </div>
         <div class="quantity-selector">
           <p class="price">$12</p>
-          <button type="button" onClick="minus('springRolls')" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
-            <span class="visually-hidden">-</span>
-          </button>
-          <p type="number" id="springRollsNum"class="number">0</p>
+          <button onClick="minus('springRolls')">-</button>
+          <p class="number">0</p>
           
-          <button type="button" onClick="plus('springRolls')" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
-            <span class="visually-hidden">+</span>
-          </button>
+          <button onClick="plus('springRolls')">+</button>
           
         </div>
     </div>
 
     <div class="menu_item" id="noodles">
-      <div class="left">
+      <div class="item-description">
         <img class="img" src="resources/noodles.png">
         <p class="name">Noodles</p>
       </div>
+      
       <div class="quantity-selector">
-        <p class="price">$12</p>
-        <button type="button" onClick="minus('noodles')" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="up">
-          <span class="visually-hidden">-</span>
-        </button>
-        <p type="number" id="noodlesNum"class="number">0</p>
         
-        <button type="button" onClick="plus('noodles')" class="btn btn-icon btn-secondary" aria-describedby="inputQuantitySelector" data-bs-step="down">
-          <span class="visually-hidden">+</span>
-        </button>
+        <p class="price">$12</p>
+        
+        <button onClick="minus('noodles')">-</button>
+        <p class="number">0</p>
+        <button onClick="plus('noodles')">+</button>
         
       </div>
-  </div>
+    </div>
+
+    <div class="checkout">
+      <p id="total">total: $0</p>
+      <button class="button">checkout</button>
+    </div>
 
   </body>
 </html>
