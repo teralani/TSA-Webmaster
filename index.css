@@ -1,9 +1,79 @@
-
 .typewriter_box{
 
     height: min-content;
     padding-bottom: 3vh;
     padding-left: 10vw;
+}
+.typewriter {
+  
+  --bgColor: #16161500;
+  font-size: 5vw;
+  --lines: 500;
+  --lineHeight: 5vw;
+  --timePerLine: 4s;
+  --widthCh: 22;
+  --width: calc(var(--widthCh) * 1ch);
+  /* do not touch the time property!!! */
+  --time: calc(var(--lines) * var(--timePerLine));
+  animation: grow var(--time) steps(var(--lines));
+  
+  animation-fill-mode: forwards;
+  background: var(--bgColor);  
+  line-height: var(--lineHeight);
+  max-height: var(--lineHeight);
+  overflow: hidden;
+  position: relative;
+  width: var(--width);
+  /* word-break: break-all; */
+}
+
+.typewriter::before {
+ 
+  content: "";
+  animation: 
+    type var(--timePerLine) linear infinite, 
+    carriageReturn var(--time) steps(var(--lines)) var(--lines),
+    caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 10vw;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  
+}
+
+section.vid{
+  height: 200vh;
+  position: relative;
+  top: 0;
+}
+section.vid div.holder{
+  position: sticky;
+  top: 0;
+}
+section.vid video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+section.vid div.slogan{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #F3F2ED;
+}
+section.vid div.slogan div{
+  font-size: 10vh;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+section.vid div.slogan div.break{
+  height:  200vh;
 }
 .special{
     animation-delay: 3s;
@@ -17,13 +87,7 @@
     from { opacity: 0;}
     to { opacity: 1;}
 }
-.main_dish{
-    position: relative;
-    justify-self: center;
-    width: 60vw;
-    bottom: 12vh;
-    left: 15vw;
-}
+
 .twitter{
     position: relative;
     font-size: 2vw;
@@ -93,41 +157,7 @@
     100% { color: black; }
   }
   
-  .typewriter {
-    --bgColor: #F3F2ED;
-    font-size: 5vw;
-    --lines: 500;
-    --lineHeight: 5vw;
-    --timePerLine: 4s;
-    --widthCh: 22;
-    --width: calc(var(--widthCh) * 1ch);
-    /* do not touch the time property!!! */
-    --time: calc(var(--lines) * var(--timePerLine));
-    animation: grow var(--time) steps(var(--lines));
-    animation-fill-mode: forwards;
-    background: var(--bgColor);  
-    line-height: var(--lineHeight);
-    max-height: var(--lineHeight);
-    overflow: hidden;
-    position: relative;
-    width: var(--width);
-    /* word-break: break-all; */
-  }
   
-  .typewriter::before {
-    content: "";
-    animation: 
-      type var(--timePerLine) linear infinite, 
-      carriageReturn var(--time) steps(var(--lines)) var(--lines),
-      caret 0.5s steps(2) infinite;
-    background: var(--bgColor);
-    border-left: 2px solid;
-    bottom: 0;
-    height: 10vw;
-    position: absolute;
-    right: 0;
-    width: 100%;
-  }
    
 
   
