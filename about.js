@@ -40,10 +40,9 @@ function addScroll(){
         car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+angle+') scale(0.7)');
         imageTrigger(progress);
     }else{
-        
+        console.log(roadMobile)
         progress = (window.scrollY+10)/(window.innerHeight);
         point = roadMobile.getPointAtLength(progress*roadMobileLength);
-        console.log(window.innerHeight*10);
         carMobile.style.transform = 'translate(' + (point.x + visualViewport.width*0.2) +', ' + point.y + ') rotate(' + 180 + ') scale(2.5vw)';
     }
 }

@@ -200,5 +200,5 @@ body{
     border-radius: 4dvh;
 }
 .button:hover{
-    box-shadow:0 0 0 0 white;
+    box-shadow:0 0 0 0 white !important;
 }

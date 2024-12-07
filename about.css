@@ -12,7 +12,7 @@ html::-webkit-scrollbar {
   display: none;
 }
 body{
-background-image:url("resources/about\ background.jpg");
+/* background-image:url("resources/about\ background.jpg"); */
 background-repeat: no-repeat;
 background-size: 100vw;
 }
@@ -58,16 +58,9 @@ position: absolute;
   top:50vh;
   width:100%;
 }
-.about-stuff{
-  position:relative;
-  background-color: white;
-}
-/* pictures */
-/* .in-view{
-  transition:left 0.5s ease-in-out, width 0.5s ease-in-out, opacity 0.5s cubic-bezier(1,-0.04,1,.54);
-} */
 
 .about-stuff{
+  position: relative;
   background-color: rgba(4, 4, 4, 0.5);
   backdrop-filter: blur(25px);
   
@@ -179,6 +172,7 @@ position: absolute;
 }
 .mobile{
   visibility: hidden;
+  width: 100vw;
 }
 
 
@@ -194,42 +188,41 @@ position: absolute;
     top:0 !important;
   }
   .line {
-    margin-top: 4vh;
-    position: fixed;
+    visibility: hidden;
   }
+
   .mobile{
+    opacity: 1;
     visibility: visible;
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     scale: 3;
   }
   .mobile #roadYellow{
-    position: relative;
-    transform: translate(10vw, 0vh);
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    display: block;
+    transform-origin: center center;
+    margin-left: 20%;
   }
   .mobile #roadBG{
+    opacity: 1;
+    visibility: visible;
     position: absolute;
+    display: block;
     transform: translate(10vw, 0vh);
-  }
-  .mobile{
-    position: absolute;
-    top:-40vh;
   }
   .line{
     visibility: hidden;
   }
-  .img{
-    width: 20vw;
-    top: 10vh;
-    opacity: 0%;
-    transition:top 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  }
-  .img .in-view{
-    opacity: 100%;
-    top: 0vh;
-    transition:top 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  }
   #car{
+    visibility: visible;
     position: fixed;
     transform: rotate(180) translate(20, 100) scale(2.5vw);
+  }
+  .about-stuff{
+    right: 0 !important;
   }
 }

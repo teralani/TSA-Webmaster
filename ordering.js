@@ -22,7 +22,7 @@ function update(item, add){
 	item = item.replace(/([A-Z])/g, ' $1').trim()
 	item = item.charAt(0).toUpperCase() + item.substring(1);
 	let price = parent.querySelector(".price");
-	total += ((add?1:-1)*price.innerText.substring(1))
+	total = Math.max(0,total+(add?1:-1)*price.innerText.substring(1));
 	totalText.innerText = "total: $" + total;
 	bill.set(item, [num.innerText, parseInt(price.innerText.substring(1)) * parseInt(num.innerText)]);
 }
