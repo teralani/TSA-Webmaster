@@ -139,6 +139,7 @@ body{
             position: relative;
             margin-right: 5%;
             margin-left: 5%;
+            text-align: center;
         }
         .inc{
             box-shadow:2px 2px 0px 0px #105f35;
