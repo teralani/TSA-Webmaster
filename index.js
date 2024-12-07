@@ -28,3 +28,16 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+document.addEventListener("DOMContentLoaded", () =>{
+  const observer = new IntersectionObserver(entries =>{
+    entries.forEach(entry =>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("in-view");
+        return;
+      }
+      //entry.target.classList.remove("in-view");
+    });
+  });
+  const allAnimatoedElements = document.querySelectorAll(".animated")
+  allAnimatoedElements.forEach((element) => observer.observe(element))
+});
