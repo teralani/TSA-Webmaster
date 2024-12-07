@@ -4,14 +4,32 @@
     padding-bottom: 3vh;
     padding-left: 10vw;
 }
-.typewriter {
+
+
+.typewriter::before {
   
-  --bgColor: #16161500;
+  content: "";
+  animation: 
+  type var(--timePerLine) linear infinite, 
+  carriageReturn var(--time) steps(var(--lines)) var(--lines),
+  caret 0.5s steps(2) infinite;
+  background: var(--bgColor);
+  border-left: 2px solid;
+  bottom: 0;
+  height: 10vw;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  
+}
+.typewriter.in-view{
+  color: white;
+  --bgColor: #000000;
   font-size: 5vw;
   --lines: 500;
   --lineHeight: 5vw;
-  --timePerLine: 4s;
-  --widthCh: 22;
+  --timePerLine: 3.5s;
+  --widthCh: 13;
   --width: calc(var(--widthCh) * 1ch);
   /* do not touch the time property!!! */
   --time: calc(var(--lines) * var(--timePerLine));
@@ -24,24 +42,6 @@
   overflow: hidden;
   position: relative;
   width: var(--width);
-  /* word-break: break-all; */
-}
-
-.typewriter::before {
- 
-  content: "";
-  animation: 
-    type var(--timePerLine) linear infinite, 
-    carriageReturn var(--time) steps(var(--lines)) var(--lines),
-    caret 0.5s steps(2) infinite;
-  background: var(--bgColor);
-  border-left: 2px solid;
-  bottom: 0;
-  height: 10vw;
-  position: absolute;
-  right: 0;
-  width: 100%;
-  
 }
 
 section.vid{
@@ -75,13 +75,17 @@ section.vid div.slogan div{
 section.vid div.slogan div.break{
   height:  200vh;
 }
-.special{
-    animation-delay: 3s;
-    animation: fadeIn 3s;
+.special_header{
+    color: white;
+    font-size: 3vh;
+    top: 18vh;
     animation-fill-mode: forwards;
     position: relative;
     font-family: 'Courier New', Courier, monospace;
     /* justify-self: center; */
+}
+.special_header.in-view{
+  animation: fadeIn 3s;
 }
 @keyframes fadeIn {
     from { opacity: 0;}
@@ -106,8 +110,7 @@ section.vid div.slogan div.break{
 	box-shadow:0 0 0 0 white;
 }
 .button {
-    animation-delay: 3s;
-    animation: fadeIn 3s;
+    
     border:1px solid #105f35;
 	color:#105f35;
 	box-shadow:4px 4px 0px 0px #105f35;
@@ -122,7 +125,10 @@ section.vid div.slogan div.break{
     border-radius: 4dvh;
     bottom: -3vh;
   }
-
+  .button.in-view{
+    
+    animation: fadeIn 2s
+  }
 @keyframes typing{
     from{
         width: 0;
