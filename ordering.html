@@ -29,6 +29,7 @@
     }
   </style>
   <body>
+   
     <div id="navbar">
         <div id="logo"><a href="/">LOGO</a></div>
         <div class="" id="nav_buttons">
@@ -126,10 +127,10 @@
         </div>
         <div class="quantity-selector">
           <p class="price">$12</p>
-          <button onClick="minus('springRolls')">-</button>
+          <button class="button inc" onClick="minus('springRolls')">-</button>
           <p class="number">0</p>
           
-          <button onClick="plus('springRolls')">+</button>
+          <button class="button inc" onClick="plus('springRolls')">+</button>
           
         </div>
     </div>
@@ -144,17 +145,42 @@
         
         <p class="price">$12</p>
         
-        <button onClick="minus('noodles')">-</button>
+        <button class="button inc" onClick="minus('noodles')">-</button>
         <p class="number">0</p>
-        <button onClick="plus('noodles')">+</button>
+        <button class="button inc" onClick="plus('noodles')">+</button>
         
       </div>
     </div>
 
     <div class="checkout">
       <p id="total">total: $0</p>
-      <button class="button">checkout</button>
+      
+      <button id="checkoutbutton" class="button" onClick="openPopup()">checkout
+        <span class="errorPopup">You haven't picked anything yet</span>
+      </button>
     </div>
+    <div class="overlay">
 
+      <div class="popup">
+          <div class="bill">
+            <ul class="list" id="itemName">
+              
+            </ul>
+            <ul class="list" id="itemAmount"></ul>
+            <ul class="list" id="itemPrice"></ul>
+          </div>
+          <div class="homeDiv">
+          
+          <div class="totalDiv">
+            <span class="total">total: $0</span>
+          </div>
+            <div class="buttonDiv">
+              <p class="thankyou">Thank you for ordering from Flora! Your order will be ready soon.</p>
+              <button id="homeButton" class="button" onclick="location.href='/'">Home</button>
+            </div>
+          </div>
+      </div>
+  
+  </div>
   </body>
 </html>
