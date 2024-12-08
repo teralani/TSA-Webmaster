@@ -54,11 +54,13 @@ section.vid div.holder{
   top: 0;
 }
 section.vid video{
+  
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   object-fit: cover;
 }
 section.vid div.slogan{
+ 
   position: absolute;
   top: 0;
   left: 0;
@@ -66,6 +68,7 @@ section.vid div.slogan{
   color: #F3F2ED;
 }
 section.vid div.slogan div{
+  
   font-size: 10vh;
   height: 20vh;
   display: flex;
@@ -75,10 +78,17 @@ section.vid div.slogan div{
 section.vid div.slogan div.break{
   height:  200vh;
 }
+section.special{
+  color: lightblue;
+  position: relative;
+  left: 50vw;
+  bottom: 15vh;
+  
+  /* animation: antitype; */
+}
 .special_header{
-    color: white;
-    font-size: 3vh;
-    top: 18vh;
+    
+    font-size: 4vh;
     animation-fill-mode: forwards;
     position: relative;
     font-family: 'Courier New', Courier, monospace;
@@ -87,11 +97,20 @@ section.vid div.slogan div.break{
 .special_header.in-view{
   animation: fadeIn 3s;
 }
+/* @keyframes antitype{
+  to{ bottom: 120vh;}
+} */
 @keyframes fadeIn {
     from { opacity: 0;}
     to { opacity: 1;}
 }
-
+.about_us{
+  color: white;
+  font-size: 2vh;
+}
+.about_us.in-view{
+  animation: fadeIn 3s;
+}
 .twitter{
     position: relative;
     font-size: 2vw;

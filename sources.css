@@ -1,0 +1,38 @@
+:root {
+    --bg1: rgba(42, 56, 50, 0.452);
+    --bg2: rgba(73, 51, 38, 0.253);
+    --accent: rgb(224,188,164);
+    --lightGreen: rgba(98, 190, 159, 0.227);
+  }
+  .everything{
+    background-color: var(--lightGreen);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: hidden;
+}
+  .T{
+    justify-self: center;
+    position: relative;
+    font-size: 5vh;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+.source{
+    text-align: center;
+    background: var(--accent);
+    width: 100%;
+    padding: 0.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 10px;
+    margin-top: 5%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in!important;
+}
+.source.inView{
+    margin-top: 0%;
+    opacity: 1 !important;
+    transition: opacity 0.5s ease-in!important;
+
+}
