@@ -34,5 +34,7 @@
     margin-top: 0%;
     opacity: 1 !important;
     transition: opacity 0.5s ease-in!important;
+    text-align: left;
+    padding-inline: 5rem;
 
 }

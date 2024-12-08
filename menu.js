@@ -47,17 +47,24 @@ function show(e) {
     section = ((window.scrollY + e.clientY)/offsets[0]) | 0;
     window.scrollBy({top: wrapper[section].getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
     slider = wrapper[section].querySelector(".carousel");
-    slider.classList.toggle("hidden");
+    slider.classList.remove("hidden");
     slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
+
+    w = document.body.querySelectorAll(".wrapper");
+
 }
 
 function left(e, n) {
     s = wrapper[e].querySelector(".slider_wrapper")
-    s.scrollBy(-(s.scrollWidth - s.clientWidth)/n, 0)
+    if (s.scrollLeft - (s.scrollWidth - s.clientWidth)/n >= 0) {
+        s.scrollBy(-(s.scrollWidth - s.clientWidth)/n, 0)
+    }
 }
 function right(e, n) {
     s = wrapper[e].querySelector(".slider_wrapper")
-    s.scrollBy((s.scrollWidth - s.clientWidth)/n, 0)
+    if (s.scrollWidth - s.scrollLeft - (s.scrollWidth - s.clientWidth)/n - visualViewport.width > 0) {
+        s.scrollBy((s.scrollWidth - s.clientWidth)/n, 0)
+    }
 }
 
 document.querySelector(".map").addEventListener("mousedown", (e) => show(e))

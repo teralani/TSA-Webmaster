@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,">
     <title>Webmaster - Menu</title>
     <!-- <script defer src="app.js"></script> -->
-    <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="navbar.css" />
     <script defer src="menu.js"></script>
     <script defer src="navbar.js"></script>
 </head>
@@ -30,7 +30,7 @@
           <li class="nav_items selected"><a>Menu</a></li>
           <li class="nav_items"><a  href="/ordering.html">Ordering</a></li>
           <li class="nav_items"><a href="/about.html">About</a></li>
-          <li class="nav_items"><a href="/contact">Contact</a></li>
+          <li class="nav_items"><a href="/contact.html">Contact</a></li>
           <li class="nav_items"><a href="/sources.html">Sources</a></li>
         </div>
         <div class="burger" onclick="showOptions()" style="width: min-content">
@@ -140,13 +140,21 @@
               </div>
           </div>
           <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
+            <div class="img" style="background-image: url('https://www.cilantroandcitronella.com/wp-content/uploads/2015/12/Golden-Bags-8-Cilantro-and-Citronella.jpg');"></div>
+            <div class="description">
+              <h1>Fried Tofu Wontons (7pcs)</h1>
+              <p>Firm tofu, mushroom, spring onions, and our signature curry paste, wrapped in a crispy wonton wrapper, fried to a beautiful golden brown..</p>
+              <p id="price">$10</p>
+            </div>
+        </div>
+        <div class="slider_inner">
+          <div class="img" style="background-image: url('https://sixhungryfeet.com/wp-content/uploads/2021/03/Tofu-Satay-with-Peanut-Sauce-1.jpg');"></div>
+          <div class="description">
+            <h1>Bangkok Tofu Satay (3pcs)</h1>
+            <p>Beautifully marinated tofu, grilled over an open fire, before served with our housemade spicy peanut sauce.</p>
+            <p id="price">$8</p>
           </div>
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
+      </div>
           </div>
         <div class="controls">
           <div id="left" onclick="left(0, 3)"></div>

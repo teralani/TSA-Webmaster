@@ -12,7 +12,8 @@ html::-webkit-scrollbar {
   display: none;
 }
 body{
-background-image:url("resources/about\ background.jpg");
+/* background-image:url("resources/about\ background.jpg"); */
+background: linear-gradient(155deg, #97cea9, rgb(9, 88, 42));
 background-repeat: no-repeat;
 background-size: 100vw;
 overflow-y: hidden !important;
@@ -189,7 +190,7 @@ overflow-y: hidden !important;
     display: block;
     height:auto;
     position: absolute;
-    top: 14vh;
+    top: 8vh;
   }
   .mobile #roadYellow{
   overflow:visible;

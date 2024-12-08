@@ -95,15 +95,15 @@
 #scroll-up:hover {
     cursor: pointer;
 }
-a {
+/* a {
     text-decoration: none;
-  }
-a:visited {
+  } */
+/* a:visited {
   color: inherit;
-}
-#navbar {
+} */
+/* #navbar {
   position:relative;
-}
+} */
 @media only screen and (max-width: 1100px){
   .fancy {
     display: none;
@@ -234,7 +234,7 @@ a:visited {
     }
     p {
       padding-inline: 5%;
-      font-size: 1.8vw;
+      font-size: max(1.8vw, 1rem);
       width: 100%;
       text-wrap:wrap;
       text-align: center;
