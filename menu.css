@@ -88,7 +88,7 @@
     background-size: 3vh 3vh;
     background-repeat: no-repeat;
     background-position: center center;
-    z-index: 999;
+    z-index: 99;
     border: 1.5px rgb(75, 75, 75) solid;
 }
 
@@ -116,7 +116,7 @@
   width: 60vw;
   background-color: rgba(66, 63, 57, 0.8);
   backdrop-filter: blur(25px);
-  z-index: 9999;
+  z-index: 9999 !important;
   border-radius: 10px;
   border: 1.5px rgb(75, 75, 75) solid;
   left: 20vw;
@@ -174,7 +174,7 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(0);
 
-  z-index: 9999;
+  z-index: 999;
 }
 
 .slider_wrapper {
