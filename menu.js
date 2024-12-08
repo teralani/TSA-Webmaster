@@ -50,29 +50,21 @@ function show(e) {
     slider.classList.remove("hidden");
     slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
 
-    w = document.body.querySelectorAll(".wrapper")
+    w = document.body.querySelectorAll(".wrapper");
 
-    w.forEach((el) => el.addEventListener("mousedown", (a) => {
-        console.log(a.target.className)
-        if(a.target.className != "slider_inner" && a.target.getParentElement.className != "controls"){
-            console.log(a.target)
-            section = ((window.scrollY + e.clientY)/offsets[0]) | 0;
-            window.scrollBy({top: wrapper[section].getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
-            slider = wrapper[section].querySelector(".carousel");
-            slider.classList.add("hidden");
-            slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
-            el.removeEventListener("onscroll")
-        }
-    }));
 }
 
 function left(e, n) {
     s = wrapper[e].querySelector(".slider_wrapper")
-    s.scrollBy(-(s.scrollWidth - s.clientWidth)/n, 0)
+    if (s.scrollLeft - (s.scrollWidth - s.clientWidth)/n >= 0) {
+        s.scrollBy(-(s.scrollWidth - s.clientWidth)/n, 0)
+    }
 }
 function right(e, n) {
     s = wrapper[e].querySelector(".slider_wrapper")
-    s.scrollBy((s.scrollWidth - s.clientWidth)/n, 0)
+    if (s.scrollWidth - s.scrollLeft - (s.scrollWidth - s.clientWidth)/n - visualViewport.width > 0) {
+        s.scrollBy((s.scrollWidth - s.clientWidth)/n, 0)
+    }
 }
 
 document.querySelector(".map").addEventListener("mousedown", (e) => show(e))

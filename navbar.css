@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 15vh;
+    height: 10vh;
     background-color: rgba(33,59,48,255);
     padding-right: 3vw;
     padding-left: 8vw;
@@ -31,27 +31,72 @@ z-index: inherit;
     rgb(224,188,164);
 }
 
-#navbar .nav_items {
+#navbar .nav_items, #navbar a {
+    list-style: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-inline: 0.5vw;
+    font-size: clamp(0px, 1.4rem, 30px);
+    flex:1;
+    text-decoration: none;
+}
+
+#navbar a:visited {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 1vw;
     font-size: clamp(0px, 1.8vw, 30px);
-    flex:1
+    flex:1;
+    color: rgb(224,188,164);
+    text-decoration: none;
 }
 #navbar .nav_items:hover {
-    /* text-shadow: white 0px 0px 20px; */
     transform: translate3d(0px, -5px, 0px);
     transition: transform 0.3s ease-in-out;
 }
 
 #navbar .nav_items.selected {
-    color:
-    rgb(243, 160, 105); font-size: clamp(0px, 2vw, 32px); text-decoration: underline; text-underline-offset: 0.9vh;
+    color:rgb(243, 160, 105);
 }
+
+#nav_buttons a {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #nav_buttons a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.1rem;
+    bottom: -0.5rem;
+    left: 0;
+    background-color: rgb(224,188,164);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+  }
+  #nav_buttons .selected a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.1rem;
+    bottom: -0.5rem;
+    left: 0;
+    background-color: rgb(243, 160, 105);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+  }
+  
+  #nav_buttons a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+
 
 #nav_buttons.show_options {
     position:fixed;
-    top: 15vh;
+    top: 10vh;
     width: 100vw;
     height: 100vh;
     left: 0;
@@ -90,7 +135,7 @@ z-index: inherit;
         display:inherit;
         position: absolute;
         right: 5vw;
-        top: 5vh;
+        top: 2vh;
     }
     #nav_buttons {
         visibility: hidden;
