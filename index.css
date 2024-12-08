@@ -1,8 +1,10 @@
 .typewriter_box{
-
+    
     height: min-content;
     padding-bottom: 3vh;
     padding-left: 10vw;
+    position: relative;
+    top: 80vh;
 }
 
 
@@ -15,7 +17,7 @@
   caret 0.5s steps(2) infinite;
   background: var(--bgColor);
   border-left: 2px solid;
-  bottom: 0;
+ 
   height: 10vw;
   position: absolute;
   right: 0;
@@ -56,7 +58,7 @@ section.vid div.holder{
 section.vid video{
   
   width: 100%;
-  height: 200vh;
+  height: 300vh;
   object-fit: cover;
 }
 section.vid div.slogan{
