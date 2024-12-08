@@ -83,7 +83,8 @@ section.special{
   position: relative;
   left: 50vw;
   bottom: 15vh;
-  animation: antitype 4s;
+  
+  /* animation: antitype; */
 }
 .special_header{
     
@@ -96,10 +97,9 @@ section.special{
 .special_header.in-view{
   animation: fadeIn 3s;
 }
-@keyframes antitype{
-  from{bottom: 3vh;}
-  to{ bottom: 3vh;}
-}
+/* @keyframes antitype{
+  to{ bottom: 120vh;}
+} */
 @keyframes fadeIn {
     from { opacity: 0;}
     to { opacity: 1;}
