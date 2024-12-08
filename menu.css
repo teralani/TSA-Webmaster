@@ -41,7 +41,7 @@
 }
 
 #appetizer .img_wrapper {
-    background: url(/resources/spring\ rolls.png) 50% 85% no-repeat fixed;
+    background: url(/resources/springRolls.png) 50% 85% no-repeat fixed;
     background-size: 50vh;
 }
 #entrees .img_wrapper {

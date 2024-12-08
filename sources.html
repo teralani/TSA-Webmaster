@@ -2,43 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webmaster - Ordering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <title>Webmaster - Sources</title>
+    <!-- <script defer src="app.js"></script> -->
     <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="ordering.css" />
+    <link rel="stylesheet" href="sources.css" />
+    <script defer src="sources.js"></script>
     <script defer src="navbar.js"></script>
-    <script defer src="ordering.js"></script>
 </head>
 <style>
-    html {
-      overflow-x: clip !important;
-    }
     * {
       box-sizing: border-box;
     }
     body {
       background-color: rgb(255, 255, 255);
-      margin: 0px;
-      overflow-x: clip !important;
-    }
-    a {
-      text-decoration: none;
-    }
-    a:visited {
-      color: inherit;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
     }
   </style>
-  <body>
-   
+<body>
     <div id="navbar">
         <div id="logo"><a href="/">LOGO</a></div>
         <div class="" id="nav_buttons">
           
           <li class="nav_items"><a href="/menu.html">Menu</a></li>
-          <li class="nav_items selected"><a>Ordering</a></li>
+          <li class="nav_items"><a  href="/ordering.html">Ordering</a></li>
           <li class="nav_items"><a href="/about.html">About</a></li>
-          <li class="nav_items"><a href="/contact.html">Contact</a></li>
-          <li class="nav_items"><a href="/sources.html">Sources</a></li>
+          <li class="nav_items "><a href="/contact.html">Contact</a></li>
+          <li class="nav_items selected"><a>Sources</a></li>
         </div>
         <div class="burger" onclick="showOptions()" style="width: min-content">
           <svg
@@ -119,66 +112,8 @@
           </svg>
         </div>
       </div>
-    
-    <div class="menu_item" id="springRolls">
-        <div class="item-description">
-          <img class="img" src="resources/springRolls.png">
-          <p class="name">Spring Rolls</p>
-        </div>
-        <div class="quantity-selector">
-          <p class="price">$12</p>
-          <button class="button inc" onClick="minus('springRolls')">-</button>
-          <p class="number">0</p>
-          <button class="button inc" onClick="plus('springRolls')">+</button>
-        </div>
-    </div>
-
-    <div class="menu_item" id="noodles">
-      <div class="item-description">
-        <img class="img" src="resources/noodles.png">
-        <p class="name">Noodles</p>
-      </div>
       
-      <div class="quantity-selector">
-        
-        <p class="price">$12</p>
-        
-        <button class="button inc" onClick="minus('noodles')">-</button>
-        <p class="number">0</p>
-        <button class="button inc" onClick="plus('noodles')">+</button>
-        
+      <div class="everything">
+        <p class="T">Our Sources</p>
       </div>
-    </div>
-
-    <div class="checkout">
-      <p id="total">total: $0</p>
-      
-      <button id="checkoutbutton" class="button" onClick="openPopup()">checkout
-        <span class="errorPopup">You haven't picked anything yet</span>
-      </button>
-    </div>
-    <div class="overlay">
-
-      <div class="popup">
-          <div class="bill">
-            <ul class="list" id="itemName">
-              
-            </ul>
-            <ul class="list" id="itemAmount"></ul>
-            <ul class="list" id="itemPrice"></ul>
-          </div>
-          <div class="homeDiv">
-          
-          <div class="totalDiv">
-            <span class="total">total: $0</span>
-          </div>
-            <div class="buttonDiv">
-              <p class="thankyou">Thank you for ordering from Flora! Your order will be ready soon.</p>
-              <button id="homeButton" class="button" onclick="location.href='/'">Home</button>
-            </div>
-          </div>
-      </div>
-  
-  </div>
-  </body>
-</html>
+</body>
