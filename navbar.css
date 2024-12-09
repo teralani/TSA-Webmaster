@@ -27,8 +27,9 @@ z-index: inherit;
     /* tbd */
     font-size: 3em;
     text-align: center;
-    color: 
-    rgb(224,188,164);
+    align-self: center;
+    color: rgb(224,188,164);
+    margin-bottom: 2%;
 }
 
 #navbar .nav_items, #navbar a {
