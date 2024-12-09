@@ -113,9 +113,9 @@ body{
     margin-right: 1%;
     height: fit-content;
     border-radius: 20px;
-    border:1px solid var(--accent);
+    border:1px solid green;
     background-color: white;
-    box-shadow:2px 2px 0px 0px var(--accent);
+    box-shadow:2px 2px 0px 0px green;
     align-content: center;
     display:flex;
     flex-wrap: wrap;
@@ -147,9 +147,13 @@ body{
         width: fit-content;
         align-items:center;
         justify-content: space-evenly;
-        margin-right: 10vw;
+        margin-right: 10%;
+        @media only screen and (max-width:800px) {
+            margin-right: 20%; 
+        }
         
-        font-size: max(1vw, 2vh);
+        
+        font-size: max(1.5vw, 2vh);
         .price{
             position: relative;
             font-family:monospace;
@@ -159,12 +163,11 @@ body{
         .number{
             width: 3vw;
             position: relative;
-            margin-right: 5%;
-            margin-left: 5%;
+            margin-inline: 10%;
             text-align: center;
         }
         .inc{
-            background-color: var(--lightGreen);
+            background-color: #ffffff;
             box-shadow:2px 2px 0px 0px #105f35;
             padding: min(10%, 1vh);
             width: fit-content;
@@ -189,9 +192,9 @@ body{
         font-size: max(1vw, 2vh);
         font-family:monospace;
         background-color:#ffffff;
-        border:1px solid var(--accent);
+        border:1px solid green;
     
-        box-shadow:4px 4px 0px 0px var(--accent);
+        box-shadow:4px 4px 0px 0px green;
         .errorPopup {
             visibility: hidden;
             background-color:#000000;
