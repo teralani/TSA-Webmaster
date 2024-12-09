@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,">
-    <title>Webmaster - Menu</title>
+    <title>Webmaster - Sources</title>
     <!-- <script defer src="app.js"></script> -->
-    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="navbar.css" />
-    <script defer src="menu.js"></script>
+    <script defer src="contact.js"></script>
     <script defer src="navbar.js"></script>
 </head>
 <style>
@@ -27,11 +27,11 @@
         <div id="logo"><a href="/">LOGO</a></div>
         <div class="" id="nav_buttons">
           
-          <li class="nav_items selected"><a>Menu</a></li>
-          <li class="nav_items"><a  href="../ordering.html">Ordering</a></li>
-          <li class="nav_items"><a href="../about.html">About</a></li>
-          <li class="nav_items"><a href="../contact.html">Contact</a></li>
-          <li class="nav_items"><a href="../sources.html">Sources</a></li>
+          <li class="nav_items"><a href="/menu.html">Menu</a></li>
+          <li class="nav_items"><a  href="/ordering.html">Ordering</a></li>
+          <li class="nav_items"><a href="/about.html">About</a></li>
+          <li class="nav_items selected"><a >Contact</a></li>
+          <li class="nav_items "><a href="/sources.html">Reference Page</a></li>
         </div>
         <div class="burger" onclick="showOptions()" style="width: min-content">
           <svg
@@ -112,141 +112,33 @@
           </svg>
         </div>
     </div>
-    <div class="fancy">
-      <ul>
-        <li class="menu_sections" onclick="sl('appetizer')">Appetizers</li>
-        <li class="menu_sections" onclick="sl('entrees')">Entrées</li>
-        <li class="menu_sections" onclick="sl('noodles')">Noodles</li>
-        <li class="menu_sections" onclick="sl('dessert')">Desserts</li>
-      </ul>
-    </div>
-    <div id="scroll-up" onclick="scrollUp()"></div>
-    <div style="display:flex; justify-content: center;">
-      <div class="map" onclick=""></div>
-    </div>
-    <div id="appetizer" class="wrapper">
-      <div class="container">
-          <div class="img_wrapper">
-          </div>
-      </div>
-      <div class="carousel hidden">
-        <div class="slider_wrapper">
-          <div class="slider_inner">
-              <div class="img" style="background-image: url('resources/springRolls.png');"></div>
-              <div class="description">
-                <h1>Spring Rolls (5pcs)</h1>
-                <p>Grated carrots, lettuce, tofu, bean sprouts, green onions, and fresh basil wrapped in rice paper. Served with our house chili ginger dressing.</p>
-                <p id="price">$12</p>
-              </div>
-          </div>
-          <div class="slider_inner">
-            <div class="img" style="background-image: url('https://www.cilantroandcitronella.com/wp-content/uploads/2015/12/Golden-Bags-8-Cilantro-and-Citronella.jpg');"></div>
-            <div class="description">
-              <h1>Fried Tofu Wontons (7pcs)</h1>
-              <p>Firm tofu, mushroom, spring onions, and our signature curry paste, wrapped in a crispy wonton wrapper, fried to a beautiful golden brown..</p>
-              <p id="price">$10</p>
+    <div class="everything">
+        <div class="map">
+            <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27120.96026661406!2d-122.36265535527448!3d47.59229293603184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906b2c942ecd0b%3A0xcc61aa78b6e3c7b9!2sCafe%20Flora!5e0!3m2!1sen!2sus!4v1733701574275!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="info">
+            <div class="form">
+            <form action="" id="form" onsubmit="return false">
+                <label class="text item" id="nameText"for="name" >Name:</label><br>
+                <input class="button item" id="name" value=""><br>
+                    
+                <label class="text item" for="email">Email:</label><br>
+                <input class="button item" type="text" id="email" value=""><br><br>
+                    
+                <label class="text" for="Feedback">Comments/Feedback:</label><br>
+                <textarea class="button item" id="Feedback" value="" rows="4" cols="50"></textarea><br><br>
+                <button type="submit" class="button hov">
+                    Submit<span class="errorPopup">Invalid Email</span>
+                </button>
+            </form>
+            </div>
             </div>
         </div>
-        <div class="slider_inner">
-          <div class="img" style="background-image: url('https://sixhungryfeet.com/wp-content/uploads/2021/03/Tofu-Satay-with-Peanut-Sauce-1.jpg');"></div>
-          <div class="description">
-            <h1>Bangkok Tofu Satay (3pcs)</h1>
-            <p>Beautifully marinated tofu, grilled over an open fire, before served with our housemade spicy peanut sauce.</p>
-            <p id="price">$8</p>
-          </div>
-      </div>
-          </div>
-        <div class="controls">
-          <div id="left" onclick="left(0, 3)"></div>
-          <div id="right" onclick="right(0, 3)"></div>
-        </div>
-      </div>
     </div>
-    <div id="entrees" class="wrapper">
-      <div class="container">
-          <div class="img_wrapper">
-          </div>
-      </div>
-      <div class="carousel hidden">
-        <div class="slider_wrapper">
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          <div class="slider_inner">
-            <div class="img"></div>
-            <div class="description"></div>
-          </div>
-          </div>
-        <div class="controls">
-          <div id="left" onclick="left(1, 4)"></div>
-          <div id="right" onclick="right(1, 4)"></div>
+    <div class="overlay">
+
+        <div class="popup">
+            <p class="thank">THank you for somethign somethign</p>
+            <button id="homeButton" class="button hov" onclick="location.href='/'">Home</button>
         </div>
-      </div>
-    </div>
-    <div id="noodles" class="wrapper">
-      <div class="container">
-          <div class="img_wrapper">
-          </div>
-      </div>
-      <div class="carousel hidden">
-        <div class="slider_wrapper">
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          <div class="slider_inner">
-            <div class="img"></div>
-            <div class="description"></div>
-          </div>
-          </div>
-        <div class="controls">
-          <div id="left" onclick="left(2, 4)"></div>
-          <div id="right" onclick="right(2, 4)"></div>
-        </div>
-      </div>
-    </div>
-    <div id="dessert" class="wrapper">
-      <div class="container">
-          <div class="img_wrapper">
-          </div>
-      </div>
-      <div class="carousel hidden">
-        <div class="slider_wrapper">
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          <div class="slider_inner">
-              <div class="img"></div>
-              <div class="description"></div>
-          </div>
-          </div>
-        <div class="controls">
-          <div id="left" onclick="left(3, 3)"></div>
-          <div id="right" onclick="right(3, 3)"></div>
-        </div>
-      </div>
+    
     </div>
 </body>
-</html>

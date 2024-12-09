@@ -48,7 +48,7 @@ function show(e) {
     window.scrollBy({top: wrapper[section].getBoundingClientRect().top + 1, left: 0, behavior: "smooth"});
     slider = wrapper[section].querySelector(".carousel");
     slider.classList.remove("hidden");
-    slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
+    // slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
 
     w = document.body.querySelectorAll(".wrapper");
 
