@@ -1,49 +1,45 @@
 .typewriter_box{
-    
-    height: min-content;
+    width: 30vw;
+    height: 20vh;
     padding-bottom: 3vh;
     padding-left: 10vw;
     position: relative;
-    top: 80vh;
+    right: 3vw;
+    top: 4vh
+    
 }
 
 
-.typewriter::before {
+body {
   
-  content: "";
+  background:rgba(33,59,48,255);
+  
+}
+
+.typewriter {
+  
+  font-family: monospace;
+  font-weight: 700;
+  font-size:4vw;
+  
+  color:#0000;
+  background:
+    linear-gradient(-90deg, white 5px,#0000 0) 10px 0,
+    linear-gradient(white 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
   animation: 
-  type var(--timePerLine) linear infinite, 
-  carriageReturn var(--time) steps(var(--lines)) var(--lines),
-  caret 0.5s steps(2) infinite;
-  background: var(--bgColor);
-  border-left: 2px solid;
- 
-  height: 10vw;
-  position: absolute;
-  right: 0;
-  width: 100%;
-  
+   b .7s infinite steps(1),   
+   t calc(var(--n)*.3s) steps(var(--n)) forwards;
 }
-.typewriter.in-view{
-  color: white;
-  --bgColor: #000000;
-  font-size: 5vw;
-  --lines: 500;
-  --lineHeight: 5vw;
-  --timePerLine: 3.5s;
-  --widthCh: 13;
-  --width: calc(var(--widthCh) * 1ch);
-  /* do not touch the time property!!! */
-  --time: calc(var(--lines) * var(--timePerLine));
-  animation: grow var(--time) steps(var(--lines));
-  
-  animation-fill-mode: forwards;
-  background: var(--bgColor);  
-  line-height: var(--lineHeight);
-  max-height: var(--lineHeight);
-  overflow: hidden;
-  position: relative;
-  width: var(--width);
+
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
 }
 
 section.vid{
@@ -58,14 +54,15 @@ section.vid div.holder{
 section.vid video{
   
   width: 100%;
-  height: 300vh;
+  height: 400vh;
   object-fit: cover;
 }
 section.vid div.slogan{
  
   position: absolute;
+  align-items: center;
   top: 0;
-  left: 0;
+
   width: 100%;
   color: #F3F2ED;
 }
@@ -75,22 +72,20 @@ section.vid div.slogan div{
   height: 20vh;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
 }
 section.vid div.slogan div.break{
   height:  200vh;
 }
 section.special{
-  color: lightblue;
+  color: rgb(0, 232, 249);
   position: relative;
-  left: 50vw;
-  bottom: 15vh;
-  
-  /* animation: antitype; */
+  right: 4vw;
+  top: 20vh;
 }
 .special_header{
     
-    font-size: 4vh;
+    font-size: 2vw;
     animation-fill-mode: forwards;
     position: relative;
     font-family: 'Courier New', Courier, monospace;
@@ -102,13 +97,13 @@ section.special{
 /* @keyframes antitype{
   to{ bottom: 120vh;}
 } */
-@keyframes fadeIn {
-    from { opacity: 0;}
-    to { opacity: 1;}
-}
+
 .about_us{
+  bottom: 5vh;
+  position: relative;
   color: white;
-  font-size: 2vh;
+  left: 5vw;
+  font-size: 1vw;
 }
 .about_us.in-view{
   animation: fadeIn 3s;
@@ -131,17 +126,20 @@ section.special{
 	box-shadow:0 0 0 0 white;
 }
 .button {
-    
-    border:1px solid #105f35;
-	color:#105f35;
-	box-shadow:4px 4px 0px 0px #105f35;
+  font-size: 16px;
+    left: 7vw;
+    top: 18vh;
+    border:1px solid lightblue;
+	color: green;
+	box-shadow:4px 4px 0px 0px green;
     position:relative;
-	background:#F3F2ED;
+	background: white;
 	padding:20px;
 	letter-spacing:5px;
 	text-transform:uppercase;
 	transition: all 300ms ease-in-out;
-	width: 9vw;
+  height: 75px;
+	width: 200px;
     cursor: pointer;    
     border-radius: 4dvh;
     bottom: -3vh;
@@ -150,44 +148,64 @@ section.special{
     
     animation: fadeIn 2s
   }
-@keyframes typing{
-    from{
-        width: 0;
-    }
-    to{
-        width: 100%;
-    }
+  .noodles{
+    z-index: 3;
+    background: url(/resources/noodles.png)  no-repeat;
+    background-size: 120vh;
+    position: relative;
+    bottom: 75vh;
+    left: 40vw;
+    height: 120vh;
+    width: 700vw;
+    animation: fadeIn 2s;
+  }
+.Vishruth{
+  position: relative;
+  top: 205vh;
+  /* height: 20vh; */
+  color: white;
+}
+.Vishruth_image{
+  position: relative;
+  left: 10vw;
+  height: 86vh;
+  width: 50vw;
+}
+.lines{
+  position: relative;
+  left: 13.5vw;
+  width: 40vw;
+  height: 52vh;
+  bottom: 23.1vh;
+}
+.Vishruth_p{
+  color: rgb(255, 180, 153);
+  position: relative;
+  font-size: 2.6vw;
+  bottom: 135vh;
+  left: 60vw;
+  width: 35vw;
+}
+.Vishruth_Title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  color: coral;
+  bottom: 135vh;
+  font-size: 4vw;
+  left: 60vw;
+}
+.Vishruth_Title.in-view{
+  animation: fadeIn 3s;
 }
 
-@keyframes blink{
-    50%{
-        border-color: transparent;
-    }
-}
-@keyframes grow {
-    0% { max-height: var(--lineHeight); }
-    100% { max-height: calc(var(--lineHeight) * var(--lines)); }
-  }
-  
-  @keyframes carriageReturn {
-    0% { top: 0; }
-    100% { top: calc(var(--lineHeight) * var(--lines)); }
-  }
-  
-  @keyframes type {
-    0% { width: 100%; }
-    100% { width: 0%; }
-  }
-  
-  @keyframes caret {
-    0% { color: var(--bgColor); }
-    100% { color: black; }
-  }
   
   
    
 
-  
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
   
   
   
