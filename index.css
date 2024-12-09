@@ -11,7 +11,7 @@
 
 
 body {
-  
+  font-family: monospace;
   background:rgba(33,59,48,255);
   
 }
@@ -31,8 +31,8 @@ body {
   background-clip:padding-box,text;
   background-repeat:no-repeat;
   animation: 
-   b .7s infinite steps(1),   
-   t calc(var(--n)*.3s) steps(var(--n)) forwards;
+   b .2s infinite steps(1),   
+   t calc(var(--n)*.1s) steps(var(--n)) forwards;
 }
 
 @keyframes t{
@@ -167,22 +167,23 @@ section.special{
 }
 .Vishruth_image{
   position: relative;
-  left: 10vw;
-  height: 86vh;
-  width: 50vw;
+  left: 2vw;
+  height: 150vh;
+  width: 60vw;
 }
 .lines{
   position: relative;
-  left: 13.5vw;
-  width: 40vw;
-  height: 52vh;
-  bottom: 23.1vh;
+  left: 6vw;
+  width: 50vw;
+  object-fit: contain;
+  height: 60vh;
+  bottom: 26vh;
 }
 .Vishruth_p{
   color: rgb(255, 180, 153);
   position: relative;
   font-size: 2.6vw;
-  bottom: 135vh;
+  bottom: 185vh;
   left: 60vw;
   width: 35vw;
 }
@@ -190,22 +191,40 @@ section.special{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   position: relative;
   color: coral;
-  bottom: 135vh;
+  bottom: 190vh;
   font-size: 4vw;
   left: 60vw;
+  @media only screen and (max-device-width: 1100px) {
+    opacity: 0;
+}
+  
+  
+}
+.Vishruth_Title::after{
+  content: '';
+  display: block;
+  position: absolute;
+  margin: 0 left;
+  inset: 0 ;
+  width: 3%;
+  border-bottom: solid 4px white;
+  transition: all 1s ease 500ms;
+}
+.Vishruth_Title.in-view::after{
+  width: 35%;
 }
 .Vishruth_Title.in-view{
   animation: fadeIn 3s;
 }
-
-  
-  
-   
 
 @keyframes fadeIn {
   from { opacity: 0;}
   to { opacity: 1;}
 }
   
-  
+@media (max-width: 500px){
+  .Vishruth_image{
+    opacity: 0;
+  }
+}
   
