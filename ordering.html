@@ -151,9 +151,9 @@
     </div>
 
     <div class="checkout">
-      <p id="total">total: $0</p>
+      <p id="total">Total: $0</p>
       
-      <button id="checkoutbutton" class="button" onClick="openPopup()">checkout
+      <button id="checkoutbutton" class="button" onClick="openPopup()">Checkout
         <span class="errorPopup">You haven't picked anything yet</span>
       </button>
     </div>
@@ -161,11 +161,13 @@
 
       <div class="popup">
           <div class="bill">
-            <ul class="list" id="itemName">
-              
-            </ul>
+            <div class="left">
+            <ul class="list" id="itemName"></ul>
+          </div>
+          <div class="right">
             <ul class="list" id="itemAmount"></ul>
             <ul class="list" id="itemPrice"></ul>
+          </div>
           </div>
           <div class="homeDiv">
           

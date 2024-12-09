@@ -23,7 +23,7 @@ function update(item, add){
 	item = item.charAt(0).toUpperCase() + item.substring(1);
 	let price = parent.querySelector(".price");
 	total = Math.max(0,total+(add?1:-1)*price.innerText.substring(1));
-	totalText.innerText = "total: $" + total;
+	totalText.innerText = "Total: $" + total;
 	bill.set(item, [num.innerText, parseInt(price.innerText.substring(1)) * parseInt(num.innerText)]);
 }
 function calcTotal(){
@@ -31,7 +31,7 @@ function calcTotal(){
 	for (let [key, value] of bill) {
 		total += value[1];
 	}
-	document.getElementById("total").innerText = "total: $" + total;
+	document.getElementById("total").innerText = "Total: $" + total;
 }
 
 function openPopup() {
