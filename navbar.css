@@ -49,6 +49,10 @@ z-index: inherit;
     color: rgb(224,188,164);
     text-decoration: none;
 }
+#navbar .nav_items {
+    text-align: center;
+}
+
 #navbar .nav_items:hover {
     transform: translate3d(0px, -5px, 0px);
     transition: transform 0.3s ease-in-out;

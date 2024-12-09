@@ -2,43 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webmaster - Ordering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <title>Webmaster - Sources</title>
+    <!-- <script defer src="app.js"></script> -->
+    <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="ordering.css" />
+    <script defer src="contact.js"></script>
     <script defer src="navbar.js"></script>
-    <script defer src="ordering.js"></script>
 </head>
 <style>
-    html {
-      overflow-x: clip !important;
-    }
     * {
       box-sizing: border-box;
     }
     body {
       background-color: rgb(255, 255, 255);
-      margin: 0px;
-      overflow-x: clip !important;
-    }
-    a {
-      text-decoration: none;
-    }
-    a:visited {
-      color: inherit;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
     }
   </style>
-  <body>
-   
+<body>
     <div id="navbar">
         <div id="logo"><a href="/">LOGO</a></div>
         <div class="" id="nav_buttons">
           
           <li class="nav_items"><a href="/menu.html">Menu</a></li>
-          <li class="nav_items selected"><a>Ordering</a></li>
+          <li class="nav_items"><a  href="/ordering.html">Ordering</a></li>
           <li class="nav_items"><a href="/about.html">About</a></li>
-          <li class="nav_items"><a href="/contact.html">Contact</a></li>
-          <li class="nav_items"><a href="/sources.html">Reference Page</a></li>
+          <li class="nav_items selected"><a >Contact</a></li>
+          <li class="nav_items "><a href="/sources.html">Reference Page</a></li>
         </div>
         <div class="burger" onclick="showOptions()" style="width: min-content">
           <svg
@@ -118,67 +111,34 @@
             </g>
           </svg>
         </div>
-      </div>
-    
-    <div class="menu_item" id="springRolls">
-        <div class="item-description">
-          <img class="img" src="resources/springRolls.png">
-          <p class="name">Spring Rolls</p>
-        </div>
-        <div class="quantity-selector">
-          <p class="price">$12</p>
-          <button class="button inc" onClick="minus('springRolls')">-</button>
-          <p class="number">0</p>
-          <button class="button inc" onClick="plus('springRolls')">+</button>
-        </div>
     </div>
-
-    <div class="menu_item" id="noodles">
-      <div class="item-description">
-        <img class="img" src="resources/noodles.png">
-        <p class="name">Noodles</p>
-      </div>
-      
-      <div class="quantity-selector">
-        
-        <p class="price">$12</p>
-        
-        <button class="button inc" onClick="minus('noodles')">-</button>
-        <p class="number">0</p>
-        <button class="button inc" onClick="plus('noodles')">+</button>
-        
-      </div>
-    </div>
-
-    <div class="checkout">
-      <p id="total">total: $0</p>
-      
-      <button id="checkoutbutton" class="button" onClick="openPopup()">checkout
-        <span class="errorPopup">You haven't picked anything yet</span>
-      </button>
+    <div class="everything">
+        <div class="map">
+            <iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27120.96026661406!2d-122.36265535527448!3d47.59229293603184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906b2c942ecd0b%3A0xcc61aa78b6e3c7b9!2sCafe%20Flora!5e0!3m2!1sen!2sus!4v1733701574275!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="info">
+            <div class="form">
+            <form action="" id="form" onsubmit="return false">
+                <label class="text item" id="nameText"for="name" >Name:</label><br>
+                <input class="button item" id="name" value=""><br>
+                    
+                <label class="text item" for="email">Email:</label><br>
+                <input class="button item" type="text" id="email" value=""><br><br>
+                    
+                <label class="text" for="Feedback">Comments/Feedback:</label><br>
+                <textarea class="button item" id="Feedback" value="" rows="4" cols="50"></textarea><br><br>
+                <button type="submit" class="button hov">
+                    Submit<span class="errorPopup">Invalid Email</span>
+                </button>
+            </form>
+            </div>
+            </div>
+        </div>
     </div>
     <div class="overlay">
 
-      <div class="popup">
-          <div class="bill">
-            <ul class="list" id="itemName">
-              
-            </ul>
-            <ul class="list" id="itemAmount"></ul>
-            <ul class="list" id="itemPrice"></ul>
-          </div>
-          <div class="homeDiv">
-          
-          <div class="totalDiv">
-            <span class="total">total: $0</span>
-          </div>
-            <div class="buttonDiv">
-              <p class="thankyou">Thank you for ordering from Flora! Your order will be ready soon.</p>
-              <button id="homeButton" class="button" onclick="location.href='/'">Home</button>
-            </div>
-          </div>
-      </div>
-  
-  </div>
-  </body>
-</html>
+        <div class="popup">
+            <p class="thank">THank you for somethign somethign</p>
+            <button id="homeButton" class="button hov" onclick="location.href='/'">Home</button>
+        </div>
+    
+    </div>
+</body>
