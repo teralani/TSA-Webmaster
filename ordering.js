@@ -24,7 +24,11 @@ function update(item, add){
 	let price = parent.querySelector(".price");
 	total = Math.max(0,total+(add?1:-1)*price.innerText.substring(1));
 	totalText.innerText = "Total: $" + total;
-	bill.set(item, [num.innerText, parseInt(price.innerText.substring(1)) * parseInt(num.innerText)]);
+	if(parseInt(num.innerText) == 0){
+		bill.delete(item);
+	}else{
+		bill.set(item, [num.innerText, parseInt(price.innerText.substring(1)) * parseInt(num.innerText)]);
+	}
 }
 function calcTotal(){
 	total = 0;

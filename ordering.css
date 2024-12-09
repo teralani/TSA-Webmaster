@@ -130,15 +130,20 @@ body{
             margin-bottom: 1%;
             position: relative;
             align-self: center;
-            height: 18vh;
+            height: 12vh;
             left:1vw;
             
         }
         .name{
+            left:1%;
+            min-width: 2vw;
+            max-width: 30vw;
+            width: fit-content;
+            text-wrap: wrap;
             left: 1vw;
             position: relative;
             align-self: center;
-            font-size: max(3vw, 2vh);
+            font-size: max(2.5vw, 2vh);
         }
         
     }
@@ -151,12 +156,13 @@ body{
         align-items:center;
         justify-content: space-evenly;
         margin-right: 10%;
+        font-size: max(1.5vw, 2vh);
         @media only screen and (max-width:800px) {
             margin-right: 20%; 
         }
         
         
-        font-size: max(1.5vw, 2vh);
+        
         .price{
             position: relative;
             font-family:monospace;
@@ -184,6 +190,7 @@ body{
     justify-content: right;
     margin-right: 1%;
     margin-top: 3%;
+    
     font-size:  max(2vw, 2vh);
     #total{
         color: #ffffff;
@@ -196,7 +203,7 @@ body{
         font-family:monospace;
         background-color:#ffffff;
         border:1px solid green;
-    
+        margin-bottom: 3%;
         box-shadow:4px 4px 0px 0px green;
         .errorPopup {
             visibility: hidden;
