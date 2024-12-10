@@ -40,7 +40,7 @@ function addScroll(){
         imageTrigger(progress);
     }else{
         console.log(window.scrollY/(document.body.getBoundingClientRect().height*1.8))
-        carMobile.style.transform = "translate(0px, -" + window.scrollY*1.8 + "px)";
+        carMobile.style.transform = "translate(0px, -" + window.scrollY*2 + "px)";
         imageTrigger(window.scrollY/document.body.clientHeight);
     }
 }
@@ -54,28 +54,28 @@ window.onresize = function() {
 
 function imageTrigger(progress){
     
-    if(progress >= 0.05){
+    if(progress >= 0.01){
         document.getElementById("farm").classList.add("in-view");
         document.getElementById("farm").classList.add("in-view");
     }else{
         document.getElementById("farm").classList.remove("in-view")
         document.getElementById("farm").classList.remove("in-view")
     }
-    if(progress >= 0.20){
+    if(progress >= 0.20-(mobile?0.1:0)){
         document.getElementById("organic").classList.add("in-view")
         document.getElementById("organic").classList.add("in-view")
     }else{
         document.getElementById("organic").classList.remove("in-view")
         document.getElementById("organic").classList.remove("in-view")
     }
-    if(progress >= 0.50-(mobile?0.1:0)){
+    if(progress >= 0.50-(mobile?0.2:0)){
         document.getElementById("fresh").classList.add("in-view")
         document.getElementById("fresh").classList.add("in-view")
     }else{
         document.getElementById("fresh").classList.remove("in-view")
         document.getElementById("fresh").classList.remove("in-view")
     }
-    if(progress >= 0.70-(mobile?0.1:0)){
+    if(progress >= 0.70-(mobile?0.3:0)){
         document.getElementById("emissions").classList.add("in-view")
         document.getElementById("emissions").classList.add("in-view")
     }else{

@@ -14,6 +14,10 @@
 z-index: inherit;
 }
 
+li > a {
+    color: inherit !important;
+}
+
 #nav_buttons {
     display: flex;
     justify-content: space-around;
@@ -27,8 +31,9 @@ z-index: inherit;
     /* tbd */
     font-size: 3em;
     text-align: center;
-    color: 
-    rgb(224,188,164);
+    align-self: center;
+    color: rgb(224,188,164);
+    margin-bottom: 2%;
 }
 
 #navbar .nav_items, #navbar a {
@@ -126,7 +131,6 @@ z-index: inherit;
 .show_options:hover {
     cursor: pointer !important;
 }
-
 
 
 @media only screen and (max-width: 1100px){

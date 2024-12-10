@@ -12,18 +12,21 @@ html::-webkit-scrollbar {
   display: none;
 }
 body{
-/* background-image:url("resources/about\ background.jpg"); */
-background: linear-gradient(155deg, #97cea9, rgb(9, 88, 42));
+background: linear-gradient(155deg, #213b30, rgb(9, 88, 42));
 background-repeat: no-repeat;
 background-size: 100vw;
+
 overflow-y: hidden !important;
 }
 
 .T{
+  color:#ffffff;
   margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
   position: relative;
   font-size: 5vh;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: monospace;
 }
 /*dfsadsa road stuff */
 .line{
@@ -79,6 +82,7 @@ overflow-y: hidden !important;
   -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
   filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
   p {
+    text-align: center;
     width: 22vw;
     color: white;
     position: relative;
@@ -86,7 +90,7 @@ overflow-y: hidden !important;
     position: relative;
     height: auto;
     border-radius: 30px;
-    font-family:'Courier New', Courier, monospace;
+    font-family:  monospace;
     font-size: 1.1vw;
     opacity: 0%;
     transition: opacity 0.5s ease-in-out;
@@ -148,10 +152,10 @@ overflow-y: hidden !important;
 }
 @media only screen and (max-width: 1700px) {
   #fresh{
-    top: 70vh;
+    top: 80vh;
   }
   #emissions{
-    top: 80vh;
+    top: 90vh;
   }
   .in-view#emissions{
     right: -55vw;
@@ -165,6 +169,7 @@ overflow-y: hidden !important;
 
 
 .text.in-view{
+  
   opacity: 100% !important;
   transition:left 0.5s ease-in-out, opacity 0.5s cubic-bezier(0.75,0,0.75,0);
 }
@@ -230,6 +235,7 @@ overflow-y: hidden !important;
     justify-content: center;
     transition: opacity 0.3s ease-in, 0.3s ease-in !important;
     .text{
+      text-align: center;
       width: 95%;
       font-size: 80%;
       margin-left: 3%;
