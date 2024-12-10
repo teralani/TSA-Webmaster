@@ -44,7 +44,7 @@ body {
 
 section.vid{
   
-  height: 300vh;
+  height: 500vh;
   position: relative;
   bottom: 50vh;
 }
@@ -69,7 +69,10 @@ section.vid div.slogan div{
   height: 20vh;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
+}
+section.vid div.slogan div.breaksmall{
+  height: 100vh;
 }
 section.vid div.slogan div.break{
   height:  200vh;
@@ -95,10 +98,6 @@ section.special{
 .special_header.in-view{
   animation: fadeIn 3s;
 }
-/* @keyframes antitype{
-  to{ bottom: 120vh;}
-} */
-
 .about_us{
   bottom: 5vh;
   position: relative;
