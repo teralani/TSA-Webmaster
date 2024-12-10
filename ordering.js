@@ -39,10 +39,12 @@ function calcTotal(){
 }
 
 function openPopup() {
+
 	if(bill.size == 0){
 		errorPopup.style.visibility = errorPopup.style.visibility == 'visible'?'hidden':  'visible';
 		return
 	}
+	errorPopup.style.height = '100%';
 	errorPopup.style.visibility = 'hidden';
 	popupOverlay.style.visibility = 'visible';
 	totalPopup.innerText = "Total: $" + total;
@@ -54,4 +56,5 @@ function openPopup() {
 		itemAmount.innerHTML += '<li>x'+ value[0] +'</li>';
 		itemPrice.innerHTML += '<li>$'+ value[1]+'</li>';
 	}
+	window.scrollTo(0,0);
 }
