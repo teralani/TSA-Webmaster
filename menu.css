@@ -256,6 +256,12 @@
   }
 }
 
+@media (width <= 550) {
+  .slider_wrapper {
+    padding-inline: 0px;
+  }
+}
+
 .controls {
   padding-inline: 2vw;;
   position: absolute;
