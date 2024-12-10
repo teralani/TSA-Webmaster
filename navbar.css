@@ -47,6 +47,7 @@ a {
     font-size: clamp(0px, 1.4rem, 30px);
     flex:1;
     text-decoration: none;
+    color: inherit;
 }
 
 #navbar a:visited {

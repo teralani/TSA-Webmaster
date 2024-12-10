@@ -150,7 +150,7 @@ section.special{
   }
   .noodles{
     z-index: 3;
-    background: url(/resources/noodles.png)  no-repeat;
+    background: url("https://github.com/aarushth/TSA-Website-Pictures/blob/main/noodles.png?raw=true")  no-repeat;
     background-size: 120vh;
     position: relative;
     bottom: 75vh;
