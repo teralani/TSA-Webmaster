@@ -36,15 +36,22 @@ a {
     font-size: 3em;
     text-align: center;
     align-self: center;
+    margin-top: 2%;;
     color: rgb(224,188,164);
     margin-bottom: 2%;
+    background-image: url("https://raw.githubusercontent.com/aarushth/TSA-Website-Pictures/refs/heads/main/Logo.webp");
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 10vh;
+    background-position: center center;
 }
 
 #navbar .nav_items, #navbar a {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 0.5vw;
-    font-size: clamp(0px, 0.8vw, 30px);
+    font-size: clamp(20px, 0.8vw, 50px);
     flex:1;
     text-decoration: none;
     color: inherit;
@@ -54,7 +61,7 @@ a {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 1vw;
-    font-size: clamp(0px, 0.8vw, 30px);
+    font-size: clamp(20px, 0.8vw, 50px);
     flex:1;
     color: rgb(224,188,164);
     text-decoration: none;
