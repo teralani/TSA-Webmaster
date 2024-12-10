@@ -256,7 +256,7 @@
   }
 }
 
-@media (width <= 550) {
+@media only screen and (width <= 550) {
   .slider_wrapper {
     padding-inline: 0px;
   }
