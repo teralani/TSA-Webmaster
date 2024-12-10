@@ -200,7 +200,7 @@
 
   overflow-x: scroll;
 
-  scroll-snap-stop: always;
+  scroll-snap-stop:normal;
   scroll-snap-type: x proximity;
   scroll-behavior: smooth;
   
