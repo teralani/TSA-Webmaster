@@ -256,7 +256,7 @@
       padding-inline: 5%;
       font-size: max(1.8vw, 1rem);
       width: 100%;
-      text-wrap:wrap;
+      text-wrap:pretty;
       text-align: center;
     }
     #price {
