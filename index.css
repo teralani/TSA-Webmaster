@@ -13,7 +13,7 @@
 body {
   font-family: monospace;
   background:rgba(33,59,48,255);
-  
+  overflow-x: hidden;
 }
 
 .typewriter {
@@ -59,6 +59,7 @@ section.vid video{
 }
 section.vid div.slogan{
   position: absolute;
+  justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -161,7 +162,7 @@ section.special{
   }
 .Vishruth{
   position: relative;
-  top: 205vh;
+  bottom: 30vh;
   /* height: 20vh; */
   color: white;
 }
@@ -188,11 +189,11 @@ section.special{
   width: 35vw;
 }
 .Vishruth_Title{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: monospace;
   position: relative;
   color: coral;
   bottom: 190vh;
-  font-size: 4vw;
+  font-size: 3vw;
   left: 60vw;
   @media only screen     and (max-device-width: 1100px) {
     opacity: 0;
@@ -211,7 +212,7 @@ section.special{
   transition: all 1s ease 500ms;
 }
 .Vishruth_Title.in-view::after{
-  width: 35%;
+  width: 30%;
 }
 .Vishruth_Title.in-view{
   animation: fadeIn 3s;
@@ -220,11 +221,5 @@ section.special{
 @keyframes fadeIn {
   from { opacity: 0;}
   to { opacity: 1;}
-}
-  
-@media (max-width: 500px){
-  .Vishruth_image{
-    opacity: 0;
-  }
 }
   
