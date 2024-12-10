@@ -33,7 +33,7 @@ a {
 }
 #navbar #logo {
     /* tbd */
-    font-size: 2vw;
+    font-size: 3em;
     text-align: center;
     align-self: center;
     color: rgb(224,188,164);
@@ -44,7 +44,7 @@ a {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 0.5vw;
-    font-size: clamp(0px, 6vw, 3vh);
+    font-size: clamp(0px, 0.8vw, 30px);
     flex:1;
     text-decoration: none;
     color: inherit;
@@ -54,7 +54,7 @@ a {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 1vw;
-    font-size: clamp(0px, 2.2vw, 60px);
+    font-size: clamp(0px, 0.8vw, 30px);
     flex:1;
     color: rgb(224,188,164);
     text-decoration: none;
@@ -164,11 +164,10 @@ a {
 
     }
     #navbar .nav_items {
-        font-size: clamp(0px, 3vh, 30px);
         flex:1
     }
     #navbar .nav_items.selected {
-        color:rgb(243, 160, 105); font-size: clamp(0px, 6vw, 30px); text-decoration: underline; text-underline-offset: 0.9vh;
+        color:rgb(243, 160, 105);
     }
     .burger:hover {
         cursor: pointer;
