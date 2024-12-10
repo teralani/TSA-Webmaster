@@ -187,8 +187,8 @@ section.special{
     width: 700vw;
     animation: fadeIn 2s;
     @media only screen and (max-width: 1700px) {
-      background-size: 90vw;
-      bottom: 22vh;
+      background-size: 70vh;
+      bottom: 35vh;
       left: 2vw;
     }
   }
