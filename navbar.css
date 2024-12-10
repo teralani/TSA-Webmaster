@@ -14,9 +14,13 @@
 z-index: inherit;
 }
 
-li > a {
+a {
     color: inherit !important;
 }
+/* 
+#logo a{
+    color: white !important;
+} */
 
 #nav_buttons {
     display: flex;
@@ -43,6 +47,7 @@ li > a {
     font-size: clamp(0px, 1.4rem, 30px);
     flex:1;
     text-decoration: none;
+    color: inherit;
 }
 
 #navbar a:visited {
