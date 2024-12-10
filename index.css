@@ -119,25 +119,27 @@ section.special{
     animation-fill-mode: forwards;
     position: relative;
     font-family: 'Courier New', Courier, monospace;
-    /* justify-self: center; */
+    justify-self: center;
+    right: 28vw;
     @media only screen and (max-width: 1700px) {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
+      right: -9vw;
     }
 }
 .special_header.in-view{
   animation: fadeIn 3s;
 }
 .about_us{
-  bottom: 5vh;
+  top: -5vh;
   position: relative;
   color: white;
-  left: 11.2vw;
+  right: -11.2vw;
   font-size: 1.25rem;
   width: 33vw;
   @media only screen and (max-width: 1700px) {
     font-size: 1.4rem;
-    bottom: 0vh;
-    left: 30vw;
+    top: 0vh;
+    right: -30vw;
     width: 85vw;
   }
 }
