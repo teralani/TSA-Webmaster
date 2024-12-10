@@ -6,3 +6,8 @@ function showOptions() {
         buttons.classList.add("show_options");
     }
 }
+
+document.body.querySelector("#logo").addEventListener("mousedown", () => {
+    window.location.href = "/TSA-Webmaster";
+    console.log("hi")
+})
