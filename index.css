@@ -109,7 +109,7 @@ section.special{
   top: 20vh;
   @media only screen and (max-width: 1700px) {
     top: 100vh;
-    right: 30vw;
+    right: 20vw;
     
   }
 }
@@ -137,7 +137,7 @@ section.special{
   @media only screen and (max-width: 1700px) {
     font-size: 1.4rem;
     bottom: 0vh;
-    left: 38vw;
+    left: 30vw;
     width: 85vw;
   }
 }
@@ -203,8 +203,9 @@ section.special{
 .Vishruth_image{
   position: relative;
   left: 2vw;
-  height: 150vh;
+  height: 170vh;
   width: 60vw;
+  object-fit: cover;
   @media only screen and (max-width: 1700px) {
     height: 70vh;
     width: 80vw;
@@ -266,7 +267,7 @@ section.special{
 .Vishruth_Title.in-view::after{
   width: 35%;
   @media only screen and (max-width: 1700px) {
-    width: 70%;
+    width: 60%;
   }
 }
 .Vishruth_Title.in-view{
