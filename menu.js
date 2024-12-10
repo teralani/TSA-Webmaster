@@ -49,7 +49,9 @@ function show(e) {
     slider = wrapper[section].querySelector(".carousel");
     slider.classList.remove("hidden");
     // slider.previousElementSibling.style.opacity = (slider.className == "carousel hidden")? "1": "0";
-
+    if(window.innerWidth <= 1100) {
+        wrapper[e].querySelector(".slider_wrapper").scroll((s.scrollWidth - s.clientWidth)/n/2, 0)
+    }
     w = document.body.querySelectorAll(".wrapper");
 
 }
