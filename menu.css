@@ -37,8 +37,9 @@
     height: 120%;
     padding: 0;
     position: absolute;
-    width: inherit;
+    width: 120%;
     z-index: 10;
+    left: -20vw;
 }
 
 #appetizer .img_wrapper {
@@ -194,6 +195,7 @@
   scroll-snap-stop: always;
   scroll-snap-type: x proximity;
   scroll-behavior: smooth;
+  
 }
 
 .slider_inner {

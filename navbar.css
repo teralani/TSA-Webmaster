@@ -33,7 +33,7 @@ a {
 }
 #navbar #logo {
     /* tbd */
-    font-size: 3em;
+    font-size: 2vw;
     text-align: center;
     align-self: center;
     color: rgb(224,188,164);
@@ -44,7 +44,7 @@ a {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 0.5vw;
-    font-size: clamp(0px, 1.4rem, 30px);
+    font-size: clamp(0px, 6vw, 3vh);
     flex:1;
     text-decoration: none;
     color: inherit;
@@ -54,7 +54,7 @@ a {
     list-style: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     padding-inline: 1vw;
-    font-size: clamp(0px, 1.8vw, 30px);
+    font-size: clamp(0px, 2.2vw, 60px);
     flex:1;
     color: rgb(224,188,164);
     text-decoration: none;
