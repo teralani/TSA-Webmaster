@@ -43,40 +43,41 @@ body {
 }
 
 section.vid{
-  height: 200vh;
+  
+  height: 300vh;
   position: relative;
-  top: 0;
+  bottom: 50vh;
 }
 section.vid div.holder{
   position: sticky;
   top: 0;
 }
 section.vid video{
-  
   width: 100%;
-  height: 400vh;
+  height: 100vh;
   object-fit: cover;
 }
 section.vid div.slogan{
- 
   position: absolute;
-  align-items: center;
   top: 0;
-
+  left: 0;
   width: 100%;
   color: #F3F2ED;
 }
 section.vid div.slogan div{
-  
   font-size: 10vh;
   height: 20vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 section.vid div.slogan div.break{
   height:  200vh;
 }
+
+
+
+
 section.special{
   color: rgb(0, 232, 249);
   position: relative;
