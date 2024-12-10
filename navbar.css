@@ -14,13 +14,13 @@
 z-index: inherit;
 }
 
-li>a {
+a {
     color: inherit !important;
 }
-
+/* 
 #logo a{
     color: white !important;
-}
+} */
 
 #nav_buttons {
     display: flex;
