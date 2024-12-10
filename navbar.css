@@ -124,7 +124,7 @@ a {
     background-color: rgba(40, 40, 40, 0.968);
     backdrop-filter:blur(50px);
     cursor:default;
-    animation: slideIn 1s linear forwards;
+    animation: slideIn 0.5s linear forwards;
 }
 
 @keyframes slideIn {
