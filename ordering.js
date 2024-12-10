@@ -23,15 +23,19 @@ function update(item, add){
 	item = item.charAt(0).toUpperCase() + item.substring(1);
 	let price = parent.querySelector(".price");
 	total = Math.max(0,total+(add?1:-1)*price.innerText.substring(1));
-	totalText.innerText = "total: $" + total;
-	bill.set(item, [num.innerText, parseInt(price.innerText.substring(1)) * parseInt(num.innerText)]);
+	totalText.innerText = "Total: $" + total;
+	if(parseInt(num.innerText) == 0){
+		bill.delete(item);
+	}else{
+		bill.set(item, [num.innerText, parseInt(price.innerText.substring(1)) * parseInt(num.innerText)]);
+	}
 }
 function calcTotal(){
 	total = 0;
 	for (let [key, value] of bill) {
 		total += value[1];
 	}
-	document.getElementById("total").innerText = "total: $" + total;
+	document.getElementById("total").innerText = "Total: $" + total;
 }
 
 function openPopup() {

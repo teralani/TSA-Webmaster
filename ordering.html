@@ -31,14 +31,14 @@
   <body>
    
     <div id="navbar">
-        <div id="logo"><a href="/">LOGO</a></div>
+        <div id="logo"><a href="/">FLORA</a></div>
         <div class="" id="nav_buttons">
           
           <li class="nav_items"><a href="../menu.html">Menu</a></li>
           <li class="nav_items selected"><a>Ordering</a></li>
           <li class="nav_items"><a href="../about.html">About</a></li>
           <li class="nav_items"><a href="../contact.html">Contact</a></li>
-          <li class="nav_items"><a href="../sources.html">Sources</a></li>
+          <li class="nav_items"><a href="../sources.html">Reference Page</a></li>
         </div>
         <div class="burger" onclick="showOptions()" style="width: min-content">
           <svg
@@ -133,6 +133,32 @@
         </div>
     </div>
 
+    <div class="menu_item" id="friedTofuWontons">
+      <div class="item-description">
+        <img class="img" src="https://www.cilantroandcitronella.com/wp-content/uploads/2015/12/Golden-Bags-8-Cilantro-and-Citronella.jpg">
+        <p class="name">Fried Tofu Wontons</p>
+      </div>
+      <div class="quantity-selector">
+        <p class="price">$12</p>
+        <button class="button inc" onClick="minus('friedTofuWontons')">-</button>
+        <p class="number">0</p>
+        <button class="button inc" onClick="plus('friedTofuWontons')">+</button>
+      </div>
+  </div>
+
+  <div class="menu_item" id="bangkokTofuSatay">
+    <div class="item-description">
+      <img class="img" src="https://sixhungryfeet.com/wp-content/uploads/2021/03/Tofu-Satay-with-Peanut-Sauce-1.jpg">
+      <p class="name">Bangkok Tofu Satay</p>
+    </div>
+    <div class="quantity-selector">
+      <p class="price">$12</p>
+      <button class="button inc" onClick="minus('bangkokTofuSatay')">-</button>
+      <p class="number">0</p>
+      <button class="button inc" onClick="plus('bangkokTofuSatay')">+</button>
+    </div>
+</div>
+
     <div class="menu_item" id="noodles">
       <div class="item-description">
         <img class="img" src="resources/noodles.png">
@@ -151,9 +177,9 @@
     </div>
 
     <div class="checkout">
-      <p id="total">total: $0</p>
+      <p id="total">Total: $0</p>
       
-      <button id="checkoutbutton" class="button" onClick="openPopup()">checkout
+      <button id="checkoutbutton" class="button" onClick="openPopup()">Checkout
         <span class="errorPopup">You haven't picked anything yet</span>
       </button>
     </div>
@@ -161,11 +187,13 @@
 
       <div class="popup">
           <div class="bill">
-            <ul class="list" id="itemName">
-              
-            </ul>
+            <div class="left">
+            <ul class="list" id="itemName"></ul>
+          </div>
+          <div class="right">
             <ul class="list" id="itemAmount"></ul>
             <ul class="list" id="itemPrice"></ul>
+          </div>
           </div>
           <div class="homeDiv">
           
