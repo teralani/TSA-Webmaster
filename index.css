@@ -5,9 +5,12 @@
     padding-left: 10vw;
     position: relative;
     right: 3vw;
-    top: 4vh
-    
-}
+    top: 4vh;
+    @media only screen and (max-width: 1700px) {
+      width: 90vw;
+    }
+  }
+
 
 
 body {
@@ -20,7 +23,7 @@ body {
   
   font-family: monospace;
   font-weight: 700;
-  font-size:4vw;
+  font-size: 4.5rem;
   
   color:#0000;
   background:
@@ -33,6 +36,7 @@ body {
   animation: 
    b .2s infinite steps(1),   
    t calc(var(--n)*.1s) steps(var(--n)) forwards;
+   
 }
 
 @keyframes t{
@@ -47,6 +51,10 @@ section.vid{
   height: 500vh;
   position: relative;
   bottom: 50vh;
+  @media only screen and (max-width: 1700px) {
+    bottom: 25vh;
+    height: 100vh;
+  }
 }
 section.vid div.holder{
   position: sticky;
@@ -56,6 +64,9 @@ section.vid video{
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  @media only screen and (max-width: 1700px) {
+    object-fit:fill;
+  }
 }
 section.vid div.slogan{
   position: absolute;
@@ -66,17 +77,26 @@ section.vid div.slogan{
   color: #F3F2ED;
 }
 section.vid div.slogan div{
-  font-size: 10vh;
+  font-size: 5rem;
   height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 1700px) {
+    font-size: 1.5rem;
+  }
 }
 section.vid div.slogan div.breaksmall{
   height: 100vh;
+  @media only screen and (max-width: 1700px) {
+    height: 10vh;
+  }
 }
 section.vid div.slogan div.break{
   height:  200vh;
+  @media only screen and (max-width: 1700px) {
+    height: 20vh;
+  }
 }
 
 
@@ -87,14 +107,22 @@ section.special{
   position: relative;
   right: 4vw;
   top: 20vh;
+  @media only screen and (max-width: 1700px) {
+    top: 100vh;
+    right: 30vw;
+    
+  }
 }
 .special_header{
     
-    font-size: 2vw;
+    font-size: 2.4rem;
     animation-fill-mode: forwards;
     position: relative;
     font-family: 'Courier New', Courier, monospace;
     /* justify-self: center; */
+    @media only screen and (max-width: 1700px) {
+      font-size: 1.7rem;
+    }
 }
 .special_header.in-view{
   animation: fadeIn 3s;
@@ -103,25 +131,18 @@ section.special{
   bottom: 5vh;
   position: relative;
   color: white;
-  left: 5.5vw;
-  font-size: 1vw;
+  left: 11.2vw;
+  font-size: 1.25rem;
+  width: 33vw;
+  @media only screen and (max-width: 1700px) {
+    font-size: 1.4rem;
+    bottom: 0vh;
+    left: 38vw;
+    width: 85vw;
+  }
 }
 .about_us.in-view{
   animation: fadeIn 3s;
-}
-.twitter{
-    position: relative;
-    font-size: 2vw;
-    left: 80vw;
-    bottom: 40vh;
-    color: rgb(0, 110, 255);
-}
-.twitter_bird{
-    position: relative;
-    width: 6vw;
-    height: 10vh;
-    left: 13vw;
-    bottom: 30vh;
 }
 .button:hover{
 	box-shadow:0 0 0 0 white;
@@ -144,6 +165,10 @@ section.special{
     cursor: pointer;    
     border-radius: 4dvh;
     bottom: -3vh;
+    @media only screen and (max-width: 1700px) {
+    top: 45vh;
+    left: 25vw;
+    }
   }
   .button.in-view{
     
@@ -159,18 +184,32 @@ section.special{
     height: 120vh;
     width: 700vw;
     animation: fadeIn 2s;
+    @media only screen and (max-width: 1700px) {
+      background-size: 90vw;
+      bottom: 22vh;
+      left: 2vw;
+    }
   }
 .Vishruth{
   position: relative;
   bottom: 30vh;
   /* height: 20vh; */
   color: white;
+  @media only screen and (max-width: 1700px) {
+    left: 20vw;
+    bottom: 30vh;
+    }
 }
 .Vishruth_image{
   position: relative;
   left: 2vw;
   height: 150vh;
   width: 60vw;
+  @media only screen and (max-width: 1700px) {
+    height: 70vh;
+    width: 80vw;
+    left: -10vw;
+  }
 }
 .lines{
   position: relative;
@@ -179,26 +218,39 @@ section.special{
   object-fit: contain;
   height: 60vh;
   bottom: 26vh;
+  @media only screen and (max-width: 1700px) {
+    width: 80vw;
+    left: -10vw;
+    height: 60vh;
+    bottom: 27vh;
+  }
 }
 .Vishruth_p{
   color: rgb(255, 180, 153);
   position: relative;
-  font-size: 2.6vw;
+  font-size: 3rem;
   bottom: 185vh;
   left: 60vw;
   width: 35vw;
+  @media only screen and (max-width: 1700px) {
+   width: 77vw;
+   left: -8vw;
+   bottom: 55vh; 
+   font-size: 1.8rem;
+  }
 }
 .Vishruth_Title{
   font-family: monospace;
   position: relative;
   color: coral;
   bottom: 190vh;
-  font-size: 3vw;
+  font-size: 4rem;
   left: 60vw;
-  @media only screen     and (max-device-width: 1100px) {
-    opacity: 0;
-}
-  
+  @media only screen and (max-width: 1700px) {
+    font-size: 2rem;
+    bottom: -8vh;
+    left: -6vw;
+  }
   
 }
 .Vishruth_Title::after{
@@ -212,7 +264,10 @@ section.special{
   transition: all 1s ease 500ms;
 }
 .Vishruth_Title.in-view::after{
-  width: 30%;
+  width: 35%;
+  @media only screen and (max-width: 1700px) {
+    width: 70%;
+  }
 }
 .Vishruth_Title.in-view{
   animation: fadeIn 3s;
