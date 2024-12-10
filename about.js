@@ -40,7 +40,7 @@ function addScroll(){
         imageTrigger(progress);
     }else{
         // console.log(window.scrollY/(document.body.getBoundingClientRect().height*1.8))
-        carMobile.style.transform = "translate(0px, -" + window.scrollY*1.1 + "px)";
+        carMobile.style.transform = "translate(0px, -" + window.scrollY*0.8 + "px)";
         imageTrigger(window.scrollY/document.body.clientHeight);
     }
 }
