@@ -39,8 +39,8 @@ function addScroll(){
         car.setAttribute('transform','translate(' + point.x + ', ' + point.y + ') rotate('+angle+') scale(0.7)');
         imageTrigger(progress);
     }else{
-        console.log(window.scrollY/(document.body.getBoundingClientRect().height*1.8))
-        carMobile.style.transform = "translate(0px, -" + window.scrollY*2 + "px)";
+        // console.log(window.scrollY/(document.body.getBoundingClientRect().height*1.8))
+        carMobile.style.transform = "translate(0px, -" + window.scrollY*1.2+ "px)";
         imageTrigger(window.scrollY/document.body.clientHeight);
     }
 }
